@@ -11,7 +11,7 @@ export default function Contatos() {
       <Link to='/'>
         <i className='fa fa-arrow-left voltar'></i>
       </Link>
-      <h1>Contato</h1>
+      <h1>Contatooooo</h1>
     </div>
   );
 }
