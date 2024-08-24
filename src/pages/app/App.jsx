@@ -9,7 +9,7 @@ export default function App() {
   return (
     <div className="pagina-app">
       <div className='menu-bar'>
-        <h1>Opa, está funcionando!</h1>
+        <h1>Opa, está funcionandooo!</h1>
 
         <ul>
           <il>
