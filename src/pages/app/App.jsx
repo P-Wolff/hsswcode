@@ -9,14 +9,19 @@ export default function App() {
   return (
     <div className="pagina-app">
       <div className='menu-bar'>
-        <h1>Opa, está funcionandooo!</h1>
+        <div className="cabecalho">
+          <img src="/assets/images/land-page/cabeçalho.jpg" alt="nao foi" />
 
-        <ul>
-          <il>
-            <Link to='/contato'>Ir para contato</Link>
-            <Link to='/aboutus'>Ir para sobre nós</Link>
-          </il>
-        </ul>
+            <div className="text">
+                  <h1>Jeito HSSW Code</h1>
+                  <h1>Como fazemos</h1>
+                  <Link to='/aboutus'> <h1>Sobre nós</h1></Link>
+                  <h1>Trabalhe conosco</h1>
+                  <h1>FeedBacks</h1>
+                  < Link to='/contato'> <h1> Contato </h1></Link>
+            </div>
+        </div>
+        
       </div>
 
     </div>

@@ -1,4 +1,36 @@
-.pagina-app {
+.pagina-app { 
+    .cabecalho{
+        position: relative;
+        display: inline-block;
+
+        img{
+            display: block;
+            width: 100%;
+            height: auto;
+            
+        }
+
+        .text {
+            position: absolute;
+            bottom: 450px;
+            display: flex;
+            gap: 50px;
+            color: aliceblue;
+            margin-left: 25%;
+            font: 100 10px roboto ;
+           
+            a{
+                color: #fff;
+               
+            
+            }
+            
+          
+        }
+       
+
+
+    }
  
 
     
