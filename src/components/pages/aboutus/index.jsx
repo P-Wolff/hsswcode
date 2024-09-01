@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 
 import './index.scss';
-
+import Navbar from '../../cabecalho/Navbar';
 
 export default function AboutUs() {
 
   return (
     <div className="pagina-about-us">
+      <Navbar />
 
       <Link to='/'>
         <i className='fa fa-arrow-left voltar'></i>
