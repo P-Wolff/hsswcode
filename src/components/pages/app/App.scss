@@ -1,0 +1,83 @@
+.pagina-app{
+    *, 
+    *::after, 
+    *::before{
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        font-size: 62.5%;
+    }
+
+    body {
+        font-size: 1.6rem;
+    }
+
+    .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 8vh;
+        position: relative;
+        
+        background: url('file:///C:/Users/adm/Documents/priscila/hsswcode/public/assets/images/land-page/containerheader.svg') no-repeat center center;
+        background-position: top;
+        background-size: cover;
+    }
+    
+    .nav_menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 8rem;
+    }
+
+    .logo{
+        margin-left: 50px;
+    }
+
+    .nav_item{
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .nav_toggler div {
+        width: 2.5rem;
+        height: 0.2rem;
+        margin:  0.4rem;
+        background: rgb(13,13,13);
+        background: linear-gradient(153deg, rgba(13,13,13,1) 0%, rgba(5,242,131,1) 0%, rgba(5,175,242,1) 100%);
+    }
+
+    .nav_toggler {
+        cursor: pointer;
+        display: none;
+    }
+
+    @media screen and (max-width: 768px) {
+        .nav_toggler {
+            display: block;
+        }
+
+        .nav_menu {
+            position: fixed;
+            top: 7vh;
+            right: 0;
+            width: 50%;
+            height: 93vh;
+            background: rgb(0, 28, 73);
+            flex-direction: column;
+            transform: translateX(100%);
+        }
+
+        /* Nav Actove Class */
+        .nav_active {
+            transform: translateX(0);
+        }
+    }
+
+
+
+
+}
