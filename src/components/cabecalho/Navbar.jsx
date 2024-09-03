@@ -1,7 +1,8 @@
 import './Navbar.scss';
 import React, {useState} from "react";
 import { Link } from 'react-router-dom';
-
+import Logo from '../assets/land-page/logo.svg';
+import fundoHead from '../assets/land-page/containerheader.svg';
 
 
 export default function Navbar () {
@@ -20,11 +21,11 @@ export default function Navbar () {
         };
 
     return(
-        <div className='cabecalho'>
+        <div className='cabecalho' style={{backgroundImage: `URL(${fundoHead})`}} >
             <header>
                 <nav className='nav'>
                     <Link to='/'>
-                        <img className='logo' src="/assets/images/land-page/logo.svg" alt="HSSW Code" />
+                    <img className='logo' src={Logo} alt='HSSW Code' title='HSSW Code'/>
                     </Link>
 
                     <ul className={active}>

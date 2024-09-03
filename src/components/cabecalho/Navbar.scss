@@ -14,6 +14,8 @@
         font-size: 1.6rem;
     }
 
+    background-size: cover;
+
     .nav {
         display: flex;
         align-items: center;
@@ -21,9 +23,6 @@
         height: 8vh;
         position: relative;
         
-        background: url('file:///C:/Users/adm/Documents/priscila/hsswcode/public/assets/images/land-page/containerheader.svg') no-repeat center center;
-        background-position: top;
-        background-size: cover;
     }
     
     .nav_menu {
