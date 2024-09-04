@@ -21,14 +21,13 @@ export default function Navbar () {
         };
 
     return(
-        <div className='cabecalho' >
-            <header>
+        <div className='cabecalho'>
+            <header className='header' >
                 <nav className='nav'>
-                    <Link to='/'>
-                    <img className='logo' src={Logo} alt='HSSW Code' title='HSSW Code'/>
-                    </Link>
-
                     <ul className={active}>
+                        <Link to='/'>
+                        <img className='logo' src={Logo} alt='HSSW Code' title='HSSW Code'/>
+                        </Link>
                         <Link to='/' className='nav_item'>Como fazemos</Link>
                         <Link to='/' className='nav_item'>Jeito HSSW Code</Link>
                         <Link to='/aboutus' className='nav_item'>Sobre nós</Link>
@@ -44,15 +43,15 @@ export default function Navbar () {
                     </div>
                 </nav>
         
+                <div class="welcome-back">
+                    <div id="welcome-section">
+                        <h1 class="welcome-text">HSSW Code</h1>
+                        <span>A tecnologia e o mundo estão a evoluir, e você?</span>
+                    </div>
+                </div>
             </header>
 
-            <div className='main-container'>
-                <main className='main'>
-                    <h1 className='text-main'>HSSW Code</h1>
-                    <h3 className='subt-text-main'>A tecnologia e o mundo estão a evoluir, e você?</h3>
-                </main>
-            </div>
+
         </div>
     );
-
 }

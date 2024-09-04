@@ -1,9 +1,18 @@
 .cabecalho {
+    :root{
+        --color-purple: #2B193D;
+        --color-wintergreen: #ACA5C2;
+        --color-grayindependance: #484d6d;
+        --color-spacecadetblue: #040D3C; 
+        --pine-green: #A22264;
+    }
+    
     *, 
     *::after, 
     *::before{
         margin: 0;
         box-sizing: border-box;
+        scroll-behavior: smooth;
     }
 
     html {
@@ -14,15 +23,14 @@
         font-size: 1.6rem;
     }
 
-    background-size: cover;
-
     .nav {
         display: flex;
         align-items: center;
         justify-content: space-around;
         height: 9vh;
-        position: relative;
         
+        box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.2);
+
     }
     
     .nav_menu {
@@ -30,6 +38,9 @@
         align-items: center;
         justify-content: space-around;
         gap: 8rem;
+
+        position: fixed;
+
     }
 
     .logo{
@@ -40,6 +51,11 @@
         text-decoration: none;
         color: #ececec;
 
+    }
+
+    .nav_item:hover{
+        color:   var(--color-spacecadetblue);
+        
     }
 
     .nav_toggler div {
@@ -94,4 +110,106 @@
     .toggle .line3 {
         transform: rotate(45deg) translate(-4px, -5px);
     }
+
+
+    // MAIN CONTAINER
+
+    /* WELCOME SECTION */
+
+.welcome-back{
+    background: url('../assets/land-page/containerheader.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+#welcome-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+   
+    
+}
+
+#welcome-section p{
+    font-size: 2.3rem;
+    color: #09A6C0;
+    text-shadow:2px 2px 3px  rgba(0, 0, 0, 0.8);
+}
+/* welcome last text */
+#welcome-section span{
+    font-size: 2rem;
+    color:  #fce834;
+    font-weight: 600;
+    position: relative;
+    left: -1100px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center; 
+}
+
+#welcome-section span::before{
+    content: "{";
+    font-size: 3rem;
+    color: #09A6C0;
+    
+
+}
+
+#welcome-section span::after{
+    content: "}";
+    font-size: 3rem;
+    color: #09A6C0;
+}
+
+
+#welcome-section:hover span{
+  
+    animation-name: dev;
+    animation-duration: 1.3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes dev{
+    0%{transform: translateX(0%);}
+    0%{}
+    0%{}
+    100%{transform: translateX(275%);}
+}
+
+/* End of last text */
+
+
+.welcome-text{
+    /* background: var(--color-grayindependance); */
+    
+    position: relative;
+    padding: 20px;
+    animation-name: anim;
+    animation-duration:1.5s ;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    font-size: 4em;
+    
+}
+
+@keyframes anim{
+    0%{color: #d6197b;}
+    15%{color: #ec3996;}
+    30%{color: #ee68ad;}
+    45%{color: #dd9dbe;}
+    60%{color: #1098e7;}
+    70%{color: #34adf3;}
+    75%{color: #30d4b9;}
+    87%{color: #2bce6a;}
+    100%{color: #26ff81;}
+}
+
+
 }
