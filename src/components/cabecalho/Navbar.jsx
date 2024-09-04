@@ -21,7 +21,7 @@ export default function Navbar () {
         };
 
     return(
-        <div className='cabecalho' style={{backgroundImage: `URL(${fundoHead})`}} >
+        <div className='cabecalho' >
             <header>
                 <nav className='nav'>
                     <Link to='/'>
@@ -45,6 +45,13 @@ export default function Navbar () {
                 </nav>
         
             </header>
+
+            <div className='main-container'>
+                <main className='main'>
+                    <h1 className='text-main'>HSSW Code</h1>
+                    <h3 className='subt-text-main'>A tecnologia e o mundo estão a evoluir, e você?</h3>
+                </main>
+            </div>
         </div>
     );
 

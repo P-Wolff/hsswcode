@@ -20,7 +20,7 @@
         display: flex;
         align-items: center;
         justify-content: space-around;
-        height: 8vh;
+        height: 9vh;
         position: relative;
         
     }
@@ -38,7 +38,8 @@
 
     .nav_item{
         text-decoration: none;
-        color: #fff;
+        color: #ececec;
+
     }
 
     .nav_toggler div {
@@ -62,12 +63,16 @@
 
         .nav_menu {
             position: fixed;
-            top: 7vh;
+            top: 9vh;
             right: 0;
-            width: 50%;
-            height: 93vh;
-            background: rgb(0, 28, 73);
+            width: 40%;
+            height: 91vh;
+            
             flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 28, 73);
+
             transform: translateX(100%);
             transition: 0.5S ease-in;
         }

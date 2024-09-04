@@ -3,6 +3,7 @@
     *::after, 
     *::before{
         margin: 0;
+        padding: 0;
         box-sizing: border-box;
     }
 
@@ -12,14 +13,28 @@
 
     body {
         font-size: 1.6rem;
+
     }
 
+    a, p, h1, h2, h3, h4 {
+        display: block;
+        align-items: center;
+
+        color: #000000;
+    }
+
+//  HEADER RESPONSIVO  //
     .nav {
         display: flex;
         align-items: center;
         justify-content: space-around;
         height: 8vh;
         position: relative;
+
+        background-image: url('../../assets/land-page/containerheader.svg');
+        background-size: cover;
+
+        // deixar a barra com um pouco de blur...
 
     }
     
@@ -74,7 +89,15 @@
         }
     }
 
+//  MAIN  //
+    .main-container {
+        display: block;
+        justify-content: center;
+        align-items: center;
 
+        
+
+    }
 
 
 }
