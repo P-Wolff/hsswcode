@@ -1,18 +1,18 @@
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 import './index.scss';
 import Navbar from '../../cabecalho/Navbar';
 
-export default function AboutUs() {
+export default function TrabalheComNos() {
+
 
   return (
-    <div className="pagina-about-us">
+    <div className="pagina-contato">
       <Navbar />
-
       <Link to='/'>
         <i className='fa fa-arrow-left voltar'></i>
       </Link>
-      <h1>Sobre nós</h1>
+      <h1>Trabalhe conosco</h1>
     </div>
   );
-};
+}

@@ -2,7 +2,7 @@
 import './index.scss';
 
 
-export default function NotFounding() {
+export default function NaoEcontrado() {
 
 
     return(
