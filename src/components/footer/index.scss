@@ -1,0 +1,52 @@
+.footer {
+
+
+
+    .componentes{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: #020E38;
+        justify-content: space-around;
+        height: 300px;
+
+        img {
+            width: 212px;
+            height: 193px;
+        }
+                
+   }
+
+   .informacao{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+        p {
+            color: #FFFFFF;
+            padding: 30px;
+                        
+        }
+
+        h2{
+            color: #FFFFFF;
+        }
+   }
+
+   .explore {
+
+        h3{
+            color: #FFFFFF;
+            padding: 10px;
+        }
+   }
+  
+   .ultimo {
+
+        h3{
+            color: #FFFFFF;
+            padding: 20px;
+        }
+   }
+
+}

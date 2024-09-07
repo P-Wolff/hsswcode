@@ -1,7 +1,7 @@
 import './App.scss';
 
 import Navbar from '../../cabecalho/Navbar';
-
+import Footer from '../../footer';
 export default function App() {
 
 
@@ -9,7 +9,8 @@ export default function App() {
     <div className="pagina-app">
       <Navbar />
 
-
+      <Footer/>
+      
     </div>
   );
 };
