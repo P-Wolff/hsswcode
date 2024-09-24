@@ -1,10 +1,11 @@
-import './Navbar.scss';
+import './index.scss';
 import React, {useState} from "react";
 import { Link } from 'react-router-dom';
-import Logo from '../assets/land-page/logo.svg';
+
+import Logo from '../../assets/land-page/logo.svg';
 
 
-export default function Navbar () {
+export default function Cabecalho () {
     const [ ativar, setAtivar ] = useState ( "nav__menu" );
     const [ iconeMenu, setIconeMenu ] = useState ( "nav__Menu" );
         const navMenu = () => {
@@ -25,10 +26,10 @@ export default function Navbar () {
                 <header className='cabecalho' >
 
                     <nav className='navevagao'>
+                            <ul className={ativar}>
                             <Link to='/'>
                                 <   img className='logo' src={Logo} alt='HSSW Code' title='HSSW Code'/>
                             </Link>
-                            <ul className={ativar}>
                                 <Link to='/' className='nav__item'>Como fazemos</Link>
                                 <Link to='/' className='nav__item'>Jeito HSSW Code</Link>
                                 <Link to='/sobre' className='nav__item'>Sobre nós</Link>

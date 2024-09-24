@@ -3,6 +3,7 @@
     *::after, 
     *::before{
         margin: 0;
+        width: 100%;
         box-sizing: border-box;
         scroll-behavior: smooth;
     }
@@ -73,7 +74,7 @@
     
 
     .cabecalho__container{
-        background: url('../assets/land-page/containerheader.svg');
+        background: url('../../assets/land-page/containerheader.svg');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -139,6 +140,10 @@
     
     
     @media screen and (max-width: 768px) {
+
+        .navegacao {
+            width: max-content;
+        }
 
         .nav__Menu {
             display: block;

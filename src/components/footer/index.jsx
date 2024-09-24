@@ -1,5 +1,6 @@
 import './index.scss'
-import Logo from '../assets/land-page/logo.svg';
+
+import Logo from '../../assets/land-page/logo.svg';
 
 
 export default function Footer () {

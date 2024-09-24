@@ -1,11 +1,11 @@
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import App from './components/pages/app/App';
-import SobreNos from "./components/pages/sobre";
-import TrabalheComNos from './components/pages/trabalho';
-import Contato from "./components/pages/contato";
-import NaoEncontrado from "./components/pages/naoecontrado"
+import App from "./pages/app";
+import SobreNos from "./pages/sobre";
+import TrabalheComNos from './pages/trabalho';
+import Contato from "./pages/contato";
+import NaoEncontrado from "./pages/naoecontrado"
 
 
 
