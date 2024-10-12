@@ -1,187 +1,97 @@
-.comp-cabecalho {
-    *, 
-    *::after, 
-    *::before{
-        margin: 0;
-        width: 100%;
-        box-sizing: border-box;
-        scroll-behavior: smooth;
+.comp-cabecalho{
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: url(../../assets/land-page/containerheader.svg) no-repeat center top;
+
+
+    padding: 20px 80px;
+    box-shadow: 0 5px 15px rgba( 0, 0, 0, 0.06 ) ;
+  
+  }
+
+  #navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #navbar li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+  }
+
+  #navbar li a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+  }
+
+  #navbar li a:hover,
+  #navbar li a.ativo {
+    color: #17c7f9;
+  }
+
+  #navbar li a:hover::after,
+  #navbar li a.ativo::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #17c7f9;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+  }
+
+
+  #mobile {
+    display: none;
+  }
+
+  #mobile i {
+    color: #fff;
+  }
+
+
+
+  @media screen and (max-width: 769px ) {
+    #navbar {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      position: fixed;
+      
+      top: 90px;
+      right: -300px;
+      width: 300px;
+      height: 100vh;
+      box-shadow: 0 40px 60px rgba( 0, 0, 0, 0.1 );
+      padding: 40px 0 0 10px;
+      transition: 0.3s ease-in-out;
+      
+      background: #060c64;
     }
 
-    html {
-        font-size: 62.5%;
+    #navbar.ativo {
+      right: 0px;
     }
 
-    body {
-        font-size: 1.6rem;
+    #navbar li {
+      margin-bottom: 25px;
     }
 
-    .navegacao {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        height: 9vh;
-        
-        box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.2);
-
-    }
-    
-    .nav__menu {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        gap: 8rem;
-
-        position: fixed;
-
+    #mobile {
+      display: block;
     }
 
-    .logo{
-        margin-left: 50px;
+    #mobile i {
+      font-size: 24px;
+      cursor: pointer;
     }
-
-    .nav__item{
-        text-decoration: none;
-        color: #ececec;
-
-    }
-
-    .nav__Menu div {
-        width: 2.5rem;
-        height: 0.2rem;
-        margin:  0.4rem;
-        background: rgb(13,13,13);
-        background: linear-gradient(153deg, rgba(13,13,13,1) 0%, rgba(5,242,131,1) 0%, rgba(5,175,242,1) 100%);
-        transition: 0.5s ease-in;
-    }
-
-    .nav__Menu {
-        cursor: pointer;
-        display: none;
-    }
-
-    /* Animacao do Icone de Menu */
-
-    .Menu .linha1 {
-        transform: rotate(-45deg) translate(-4px, 5px);
-    }
-    .Menu .linha2 {
-        opacity: 0;
-    }
-    .Menu .linha3 {
-        transform: rotate(45deg) translate(-4px, -5px);
-    }
-    
-
-    .cabecalho__container{
-        background: url('../../assets/land-page/containerheader.svg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-
-    }
-    
-    #secao__container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width: 100%;
-        height: 100vh;
-        background-color: rgba(0, 0, 0, 0.4);
-        
-    }
-    
-    #secao__container span{
-        font-size: 4rem;
-        color:  #eeeeee;
-        font-weight: 600;
-        position: relative;
-        left: -1650px;
-        padding: 10px;
-        border-radius: 10px;
-        width: 400px;
-        text-align: center; 
-    }
-    
-    #secao__container span::before{
-        content: "";
-        font-size: 3rem;
-        color: #09A6C0;
-
-
-    }
-
-    #secao__container span::after{
-        content: "";
-        font-size: 3rem;
-        color: #09A6C0;
-    }
-    
-    #secao__container:hover span{
-        animation-name: dev;
-        animation-duration: 1.3s;
-        animation-fill-mode: forwards;
-    }
-    
-    @keyframes dev{
-        0%{transform: translateX(0%);}
-        0%{}
-        0%{}
-        100%{transform: translateX(275%);}
-    }
-
-    @keyframes titulo{
-        0%{transform: translateX(0%);}
-        0%{}
-        0%{}
-        100%{transform: translateX(275%);}
-    }
-    
-    
-    @media screen and (max-width: 768px) {
-
-        .navegacao {
-            width: max-content;
-        }
-
-        .nav__Menu {
-            display: block;
-        }
-    
-        .nav__menu {
-            position: fixed;
-            top: 9vh;
-            right: 0;
-            width: 40%;
-            height: 91vh;
-            
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background: rgba(0, 28, 73);
-    
-            transform: translateX(100%);
-            transition: 0.5S ease-in;
-        }
-    
-        /* Classe Nav Ativa */
-        .nav__ativar {
-            transform: translateX(0);
-        }
-
-        #secao__container span {
-            font-size: 4rem;
-            color:  #eeeeee;
-            font-weight: 600;
-            position: relative;
-            left: -1100px;
-            padding: 10px;
-            border-radius: 10px;
-            width: 400px;
-            text-align: center; 
-        }
-
-    }
-    
+  }
 }

@@ -1,21 +1,44 @@
 .pagina-app{
-    *, 
-    *::after, 
-    *::before{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
 
+
+    .headline {
+        width: 100%;
+        height: 50vh;
+        min-height: 350px;
+        background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1435224668334-0f82ec57b605?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80');
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
-
-    html {
-        font-size: 62.5%;
+    
+          /* Media Queries */
+        /* Mobile Devices - Phones/Tablets */
+        @media only screen and (max-width: 720px) { 
+        
+            /* MOBILE HEADINGS */
+        
+            h1 {
+                font-size: 1.9rem;
+            }
+        
+            h2 {
+                font-size: 1rem;
+            }
+        
+            p {
+                font-size: 0.8rem;
+            }
+        
+            /* SECTIONS */
+            
+            .headline {
+                height: 20vh;
+            }
+            
+    
     }
-
-    body {
-        font-size: 1.6rem;
-    }
-
-
+  
+  
 
 }

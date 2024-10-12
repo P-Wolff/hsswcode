@@ -1,57 +1,56 @@
 import './index.scss';
-import React, {useState} from "react";
 import { Link } from 'react-router-dom';
+
+
 
 import Logo from '../../assets/land-page/logo.svg';
 
 
-export default function Cabecalho () {
-    const [ ativar, setAtivar ] = useState ( "nav__menu" );
-    const [ iconeMenu, setIconeMenu ] = useState ( "nav__Menu" );
-        const navMenu = () => {
-            ativar === "nav__menu" 
-            ? setAtivar( 'nav__menu nav__ativar' ) 
-            : setAtivar ( "nav__menu" );
 
-            //      Icone de Menu
 
-            iconeMenu === 'nav__Menu'
-            ? setIconeMenu ( "nav__Menu Menu" )
-            : setIconeMenu ( "nav__Menu" );
-        };
-    
+export default function Navbar() {
+    state = { clicked: false };
+    handleClick = () => {
+        this.setState({ clicked:
+            !this.state.clicked
+        })
+    }
+
+
     return(
-        <div className='comp-cabecalho'>
-            <div class="cabecalho__container">
-                <header className='cabecalho' >
+        <div className="comp-cabecalho pagina">
+            <nav className='nav'>
+                <Link to='/'>
+                    <img src={Logo} alt="HSSW Code Logo" />
+                </Link>
 
-                    <nav className='navevagao'>
-                            <ul className={ativar}>
-                            <Link to='/'>
-                                <   img className='logo' src={Logo} alt='HSSW Code' title='HSSW Code'/>
-                            </Link>
-                                <Link to='/' className='nav__item'>Como fazemos</Link>
-                                <Link to='/' className='nav__item'>Jeito HSSW Code</Link>
-                                <Link to='/sobre' className='nav__item'>Sobre nós</Link>
-                                <Link to='/trabalho' className='nav__item'>Trabalhe conosco</Link>
-                                <Link to='/' className='nav__item'>FeedBacks</Link>
-                                <Link to='/contato' className='nav__item'>Contato</Link>
-                            </ul>
+                <div className='info-navbar'>
+                    <ul id='navbar' className={ this.state.clicked
+                        ? "#navbar ativo" : "#navbar"
+                    }>
+                        <li><Link to="/" className='ativo'>Jeito da HSSW</Link></li>
+                        <li><Link to="/">Como fazemos</Link></li>
+                        <li><Link to="/sobre ">Sobre nós</Link></li>
+                        <li><Link to="/trabalho">Trabalhe  conosco</Link></li>
+                        <li><Link to="/">FeedBacks</Link></li>
 
-                            <div onClick = {navMenu} className={iconeMenu}>
-                                <div className="linha1"></div> 
-                                <div className="linha2"></div> 
-                                <div className="linha3"></div>
-                            </div>
-                        </nav>
+                        <li><Link to="/contato">Contato</Link></li>
+                    </ul>
+                </div>
 
-                    <div id="secao__container">
-                        <span className="texto__container">HSSW Code</span>
-                        <span>A tecnologia e o mundo estão a evoluir, e você?</span>
-                    </div>
-                </header>
-            </div>
+                <div id="mobile" onClick={ this.handleClick }>
+                    <i id='bar'
+                        className={
+                            this.state.clicked 
+                            ? "fas fa-times"
+                            : "fas fa-bars"
+                        }>
+                    </i>
+                </div>
+
+            </nav>
 
         </div>
+
     );
 }

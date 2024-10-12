@@ -10,6 +10,11 @@ export default function App() {
     <div className="pagina-app pagina">
       <Cabecalho />
       
+      <section className="headline">
+        <h1>Responsive Navigation</h1>
+        <p>Using CSS grid and flexbox to easily build navbars!</p>
+      </section>
+
       <Footer/>
       
     </div>
