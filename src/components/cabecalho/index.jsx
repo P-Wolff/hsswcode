@@ -18,7 +18,7 @@ export default function Navbar() {
 
 
     return(
-        <div className="comp-cabecalho pagina">
+        <div className="comp-cabecalho">
             <nav className='nav'>
                 <Link to='/'>
                     <img src={Logo} alt="HSSW Code Logo" />
