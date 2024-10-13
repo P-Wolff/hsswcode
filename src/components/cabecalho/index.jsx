@@ -2,54 +2,62 @@ import './index.scss';
 import { Link } from 'react-router-dom';
 
 
-
 import Logo from '../../assets/land-page/logo.svg';
-
+import { useState } from 'react';
 
 
 
 export default function Navbar() {
-    state = { clicked: false };
-    handleClick = () => {
-        this.setState({ clicked:
-            !this.state.clicked
-        })
+    const [active, setActive] = useState("nav__menu");
+    const [toggleIcon, setTogglerIcon] = useState("nav__toggler");
+
+    const navToggle = () => {
+        active === "nav__menu"
+        ? setActive("nav__menu nav__active")
+        : setActive("nav__menu");
+
+
+        toggleIcon === "nav__toggler"
+        ? setTogglerIcon("nav__toggler toggle")
+        : setTogglerIcon("nav__toggler");
     }
 
 
     return(
-        <div className="comp-cabecalho">
-            <nav className='nav'>
-                <Link to='/'>
+        <div className="comp-cabecalho pagina">
+            <nav className="nav">
+                <Link to='/' className='nav__brand'>
                     <img src={Logo} alt="HSSW Code Logo" />
                 </Link>
 
-                <div className='info-navbar'>
-                    <ul id='navbar' className={ this.state.clicked
-                        ? "#navbar ativo" : "#navbar"
-                    }>
-                        <li><Link to="/" className='ativo'>Jeito da HSSW</Link></li>
-                        <li><Link to="/">Como fazemos</Link></li>
-                        <li><Link to="/sobre ">Sobre nós</Link></li>
-                        <li><Link to="/trabalho">Trabalhe  conosco</Link></li>
-                        <li><Link to="/">FeedBacks</Link></li>
+                <ul id="navbar" className={active}>                
+                    <li className="nav__item">
+                        <Link to="/" className="nav__link" > Jeito da HSSW </Link>
+                    </li>
+                    <li className="nav__item">
+                        <Link to="/" className="nav__link" > Como fazemos </Link>
+                    </li>
+                    <li className="nav__item">
+                        <Link to="/sobre" className="nav__link" > Sobre nós </Link>
+                    </li>
+                    <li className="nav__item">
+                        <Link to="/trabalho" className="nav__link" > Trabalhe conosco </Link>
+                    </li>
+                    <li className="nav__item">
+                        <Link to="/" className="nav__link" > FeedBacks </Link>
+                    </li>
 
-                        <li><Link to="/contato">Contato</Link></li>
-                    </ul>
+                    <li className="nav__item">
+                        <Link to="/contato" className="nav__link" > Contato </Link>
+                    </li>
+                </ul>
+
+                <div onClick={navToggle} className={toggleIcon}>
+                    <div className="line1"></div>
+                    <div className="line2"></div>
+                    <div className="line3"></div>
                 </div>
-
-                <div id="mobile" onClick={ this.handleClick }>
-                    <i id='bar'
-                        className={
-                            this.state.clicked 
-                            ? "fas fa-times"
-                            : "fas fa-bars"
-                        }>
-                    </i>
-                </div>
-
             </nav>
-
         </div>
 
     );

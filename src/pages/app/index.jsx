@@ -3,11 +3,11 @@ import './index.scss';
 import Cabecalho from '../../components/cabecalho';
 import Footer from '../../components/footer';
 
-export default function App() {
+export default function Home() {
 
 
   return (
-    <div className="pagina-app pagina">
+    <div className="pagina-home pagina">
       <Cabecalho />
       
       <section className="headline">
