@@ -7,24 +7,11 @@ export default function Home() {
 
 
   return (
-    <div className="pagina-home pagina">
+    <div className="page-home page">
       <Cabecalho />
       
-      <section className="headline">
-        <h1>Responsive Navigation</h1>
-        <p>Using CSS grid and flexbox to easily build navbars!</p>
-      </section>
-      
-        <section id="secao_container">
+        <section id="container__section">
 
-            <div>
-                <span className="titulo">
-                    HSSW Code
-                </span>
-                <span className="texto">
-                    A tecnologia e o mundo estão a evoluir, e você?
-                </span>
-            </div>
         </section>
 
       <Footer/>

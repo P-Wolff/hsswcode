@@ -1,44 +1,62 @@
 .pagina-app{
 
 
-    .headline {
-        width: 100%;
-        height: 50vh;
-        min-height: 350px;
-        background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1435224668334-0f82ec57b605?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80');
-        background-size: cover;
+
+    #secao__container{
         display: flex;
-        flex-direction: column;
         justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.4);
+        background: url('../../assets/land-page/containerheader.svg');
     }
     
-          /* Media Queries */
-        /* Mobile Devices - Phones/Tablets */
-        @media only screen and (max-width: 720px) { 
-        
-            /* MOBILE HEADINGS */
-        
-            h1 {
-                font-size: 1.9rem;
-            }
-        
-            h2 {
-                font-size: 1rem;
-            }
-        
-            p {
-                font-size: 0.8rem;
-            }
-        
-            /* SECTIONS */
-            
-            .headline {
-                height: 20vh;
-            }
-            
+    #secao__container span{
+        font-size: 4rem;
+        color:  #eeeeee;
+        font-weight: 600;
+        position: relative;
+        left: -1650px;
+        padding: 10px;
+        border-radius: 10px;
+        width: 400px;
+        text-align: center; 
+    }
     
+    #secao__container span::before{
+        content: "";
+        font-size: 3rem;
+        color: #09A6C0;
+
+    }
+
+    #secao__container span::after{
+        content: "";
+        font-size: 3rem;
+        color: #09A6C0;
+    }
+    
+    #secao__container:hover span{
+        animation-name: dev;
+        animation-duration: 1.3s;
+        animation-fill-mode: forwards;
     }
   
-  
+    @media screen and (max-width: 768px) {
+        #secao__container span {
+            font-size: 4rem;
+            color:  #eeeeee;
+            font-weight: 600;
+            position: relative;
+            left: -1100px;
+            padding: 10px;
+            border-radius: 10px;
+            width: 400px;
+            text-align: center; 
+        }
+
+    }
 
 }
