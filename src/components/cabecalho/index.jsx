@@ -2,7 +2,7 @@ import './index.scss';
 import { Link } from 'react-router-dom';
 
 
-import Logo from '../../assets/land-page/logo.svg';
+import Logo from '../../assets/images/land-page/logo.svg';
 import { useState } from 'react';
 
 
@@ -24,7 +24,7 @@ export default function Navbar() {
 
 
     return(
-        <div className="comp-cabecalho pagina">
+        <div className="comp-header pagina">
             <nav className="nav">
                 <Link to='/' className='nav__brand'>
                     <img src={Logo} alt="HSSW Code Logo" />

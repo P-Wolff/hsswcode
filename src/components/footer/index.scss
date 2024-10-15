@@ -1,52 +1,241 @@
-.footer {
+.comp-footer {
 
 
+    h6 {
+        color: #fff;
+        font-size: 16px;
+        text-transform: uppercase;
+        margin-top: 5px;
+        letter-spacing: 2px;
+    }
+    p {
+        color: #fff;
+    }
 
-    .componentes{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+
+    .footer {
         background-color: #020E38;
+        padding: 45px 0 20px;
+        line-height: 30px;
+        color: #fff;
+    }
+
+
+
+    .footer .grad-bar {
+        width: 100%;
+        height: 2px;
+        background: rgb(13,13,13);
+        background: linear-gradient(153deg, rgba(13,13,13,1) 0%, rgba(5,242,131,1) 0%, rgba(5,175,242,1) 100%) transparent;
+        background-size: 400% 400%;
+        -webkit-animation: gradbar 15s ease infinite;
+        -moz-animation: gradbar 15s ease infinite;
+        animation: gradbar 15s ease infinite;
+    }
+    @-webkit-keyframes gradbar {
+        0% {
+            background-position: 0% 50%
+        }
+        50% {
+            background-position: 100% 50%
+        }
+        100% {
+            background-position: 0% 50%
+        }
+    }
+    
+    @-moz-keyframes gradbar {
+        0% {
+            background-position: 0% 50%
+        }
+        50% {
+            background-position: 100% 50%
+        }
+        100% {
+            background-position: 0% 50%
+        }
+    }
+    
+    @keyframes gradbar {
+        0% {
+            background-position: 0% 50%
+        }
+        50% {
+            background-position: 100% 50%
+        }
+        100% {
+            background-position: 0% 50%
+        }
+    }
+
+
+
+    .footer-links {
+        padding-left: 0;
+        color: #fff;
+    }
+    .footer-links li {
+        display: block;
+    }
+    .footer-links .foot__link:active, 
+    .footer-links .foot__link:focus, 
+    .footer-links .foot__link:hover {
+        color: #3366cc;
+        background: rgb(13,13,13);
+        background: linear-gradient(153deg, rgba(13,13,13,1) 0%, rgba(5,242,131,1) 0%, rgba(5,175,242,1) 100%) transparent;
+        background-clip: text;
+        display: inline;
+        color: transparent;
+        animation: animated 4s linear infinite;    
+    }
+    @keyframes animated {
+        to {background-position-x: 161px;}
+    }
+    .footer-links .foot__link:hover
+    {
+        border-bottom: solid 2px #0eecec;
+    }
+    .footer-links.inline li
+    {
+        display: inline-block;
+    }
+
+
+    .footer .social-icons
+    {
+        text-align: right;
+    }
+    .footer .social-icons a
+    {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        margin-left: 6px;
+        margin-right: 0;
+        border-radius: 100%;
+        background-color: #fff;
+    }
+
+
+    .copyright-text
+    {
+        margin: 0;
+    }
+
+
+    @media screen and ( max-width: 991px )
+    {
+        .footer .explore
+        {
+            margin-bottom: 30px;
+        }
+    }
+
+    @media screen and ( max-width: 767px )
+    {
+        .footer
+        {
+            padding-bottom: 0;
+        }
+        .footer .copyright-text, .footer .social-icons
+        {
+            text-align: center;
+        }
+    }
+
+    .social-icons
+    {
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+    }
+    .social-icons li
+    {
+        display: inline-block;
+        margin-bottom: 4px;
+        margin-top: 7px;
+
+    }
+    .social-icons li.title
+    {
+        margin-right: 5px;
+        text-transform: uppercase;
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 13px;
+    }
+    .social-icons a{
+        background-color: #eceeef;
+        color: #818a91;
+        font-size: 16px;
+        display: inline-block;
+        line-height: 44px;
+        width: 44px;
+        height: 44px;
+        text-align: center;
+        margin-right: 8px;
+        border-radius: 100%;
+        -webkit-transition: all .2s linear;
+        -o-transition: all .2s linear;
+        transition: all .2s linear;
+    }
+    .social-icons a:active,.social-icons a:focus,.social-icons a:hover
+    {
+        color: #fff;
+        background-color: #29aafe;
+    }
+    .social-icons.size-sm a
+    {
+        line-height: 34px;
+        height: 34px;
+        width: 34px;
+        font-size: 14px;
+    }
+
+    .social-icons a.facebook:hover
+    {
+        background-color: #3b5998;
+    }
+    .social-icons a.twitter:hover
+    {
+        background-color: #00aced;
+    }
+    .social-icons a.linkedin:hover
+    {
+        background-color: #007bb6;
+    }
+    .social-icons a.instagram:hover
+    {
+        background-color: #ef3dff;
+    }
+
+    @media screen and ( max-width: 767px )
+    {
+        .social-icons li.title
+        {
+            display:block;
+            margin-right:0;
+            font-weight:600;
+        }
+    }
+
+
+    .info {
+        display: flex;
+        align-items: center;
         justify-content: space-around;
-        height: 300px;
+    }
 
-        img {
-            width: 212px;
-            height: 193px;
-        }
-                
-   }
+    .info__text{
+        color: #fff;
+        font-size: 16px;
+        text-transform: uppercase;
+        margin-top: 5px;
+        letter-spacing: 2px;
 
-   .informacao{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-        p {
-            color: #FFFFFF;
-            padding: 30px;
-                        
-        }
-
-        h2{
-            color: #FFFFFF;
-        }
-   }
-
-   .explore {
-
-        h3{
-            color: #FFFFFF;
-            padding: 10px;
-        }
-   }
-  
-   .ultimo {
-
-        h3{
-            color: #FFFFFF;
-            padding: 20px;
-        }
-   }
-
+        width: 350px;
+        display: inline-block;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
 }
