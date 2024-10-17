@@ -1,148 +1,107 @@
 .comp-footer {
 
-
-    h6 {
-        color: #fff;
-        font-size: 16px;
-        text-transform: uppercase;
-        margin-top: 5px;
-        letter-spacing: 2px;
+    .section__padding {
+        padding: 4rem 4rem;
     }
-    p {
-        color: #fff;
-    }
-
-
     .footer {
-        background-color: #020E38;
-        padding: 45px 0 20px;
-        line-height: 30px;
-        color: #fff;
+        background-color: #020E38;;
+    }
+    .sb__footer {
+        display: flex;
+        flex-direction: column;
     }
 
 
-
-    .footer .grad-bar {
+    .sb__footer-links {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
         width: 100%;
-        height: 2px;
-        background: rgb(13,13,13);
-        background: linear-gradient(153deg, rgba(13,13,13,1) 0%, rgba(5,242,131,1) 0%, rgba(5,175,242,1) 100%) transparent;
-        background-size: 400% 400%;
-        -webkit-animation: gradbar 15s ease infinite;
-        -moz-animation: gradbar 15s ease infinite;
-        animation: gradbar 15s ease infinite;
+        text-align: left;
+        margin-bottom: 2rem;
     }
-    @-webkit-keyframes gradbar {
-        0% {
-            background-position: 0% 50%
-        }
-        50% {
-            background-position: 100% 50%
-        }
-        100% {
-            background-position: 0% 50%
-        }
-    }
-    
-    @-moz-keyframes gradbar {
-        0% {
-            background-position: 0% 50%
-        }
-        50% {
-            background-position: 100% 50%
-        }
-        100% {
-            background-position: 0% 50%
-        }
-    }
-    
-    @keyframes gradbar {
-        0% {
-            background-position: 0% 50%
-        }
-        50% {
-            background-position: 100% 50%
-        }
-        100% {
-            background-position: 0% 50%
-        }
+    .sb__footer-links-div {
+        font-size: 18px;
+        line-height: 17px;
+        margin-bottom: 0.9rem;
+
     }
 
 
-
-    .footer-links {
-        padding-left: 0;
+    .sb__footer-links_div h4 {
+        font-size: 18px;
+        line-height: 17px;
+        margin-bottom: 0.9rem;
+        
+    }
+    .sb__footer-links_div p {
+        font-size: 14px;
+        line-height: 17px;
+        margin-bottom: 0.9rem;
+    }
+    .sb__footer-links-div {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        margin-top: 9px;
         color: #fff;
     }
-    .footer-links li {
-        display: block;
+    .logo {
+        width: 15rem;
     }
-    .footer-links .foot__link:active, 
-    .footer-links .foot__link:focus, 
-    .footer-links .foot__link:hover {
+    .sb__footer-links_div {
+        width: 150px;
+        margin: 1rem;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        color: #fff;
+    }
+
+    .foot__link {
+        line-height: 40px;
+        font-size: 15px;
+        width: 180px;
+        display: inline-block;
+    }
+    .foot__link:active, 
+    .foot__link:focus, 
+    .foot__link:hover  {
         color: #3366cc;
         background: rgb(13,13,13);
         background: linear-gradient(153deg, rgba(13,13,13,1) 0%, rgba(5,242,131,1) 0%, rgba(5,175,242,1) 100%) transparent;
         background-clip: text;
         display: inline;
         color: transparent;
-        animation: animated 4s linear infinite;    
+        animation: animated 4s linear infinite;
     }
     @keyframes animated {
         to {background-position-x: 161px;}
     }
-    .footer-links .foot__link:hover
+    .foot__link:hover
     {
         border-bottom: solid 2px #0eecec;
     }
-    .footer-links.inline li
-    {
-        display: inline-block;
-    }
 
 
-    .footer .social-icons
+
+    .social-icons
     {
-        text-align: right;
+        display: flex;
+        flex-direction: row;
     }
-    .footer .social-icons a
+    .social-icons a
     {
-        width: 40px;
-        height: 40px;
+        width: 80px;
+        height: 80px;
         line-height: 40px;
         margin-left: 6px;
         margin-right: 0;
         border-radius: 100%;
         background-color: #fff;
     }
-
-
-    .copyright-text
-    {
-        margin: 0;
-    }
-
-
-    @media screen and ( max-width: 991px )
-    {
-        .footer .explore
-        {
-            margin-bottom: 30px;
-        }
-    }
-
-    @media screen and ( max-width: 767px )
-    {
-        .footer
-        {
-            padding-bottom: 0;
-        }
-        .footer .copyright-text, .footer .social-icons
-        {
-            text-align: center;
-        }
-    }
-
     .social-icons
     {
         padding-left: 0;
@@ -182,7 +141,7 @@
     .social-icons a:active,.social-icons a:focus,.social-icons a:hover
     {
         color: #fff;
-        background-color: #29aafe;
+        background-color: #06003d;
     }
     .social-icons.size-sm a
     {
@@ -191,14 +150,13 @@
         width: 34px;
         font-size: 14px;
     }
-
     .social-icons a.facebook:hover
     {
         background-color: #3b5998;
     }
     .social-icons a.twitter:hover
     {
-        background-color: #00aced;
+        background-color: #0b0c0c;
     }
     .social-icons a.linkedin:hover
     {
@@ -209,33 +167,122 @@
         background-color: #ef3dff;
     }
 
-    @media screen and ( max-width: 767px )
-    {
-        .social-icons li.title
-        {
-            display:block;
-            margin-right:0;
-            font-weight:600;
+
+
+    .grad-bar {
+        width: 100%;
+        height: 3px;
+        background: rgb(13,13,13);
+        background: linear-gradient(153deg, rgba(13,13,13,1) 0%, rgba(5,242,131,1) 0%, rgba(5,175,242,1) 100%) transparent;
+        background-size: 400% 400%;
+        -webkit-animation: gradbar 15s ease infinite;
+        -moz-animation: gradbar 15s ease infinite;
+        animation: gradbar 15s ease infinite;
+    }
+    @-webkit-keyframes gradbar {
+        0% {
+            background-position: 0% 50%
+        }
+        50% {
+            background-position: 100% 50%
+        }
+        100% {
+            background-position: 0% 50%
+        }
+    }
+    
+    @-moz-keyframes gradbar {
+        0% {
+            background-position: 0% 50%
+        }
+        50% {
+            background-position: 100% 50%
+        }
+        100% {
+            background-position: 0% 50%
+        }
+    }
+    @keyframes gradbar {
+        0% {
+            background-position: 0% 50%
+        }
+        50% {
+            background-position: 100% 50%
+        }
+        100% {
+            background-position: 0% 50%
         }
     }
 
 
-    .info {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
+    .sb_footer-below{
+        display: inline-block;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-between;
+        margin-top: 1.5rem;
+        color: #fff;
+    }
+    .sb__footer-below-links {
+        display: inline-block;
+        flex-direction: row;
+        color: #fff;
+    }
+    .sb__footer-below-links p {
+        font-size: 13px;
+        line-height: 15px;
+        color: #fff;
+        font-weight: 600;
+    }
+    .sb__footer-copyright{
+        display: inline-block;
+    }
+    .sb__footer-copyright p {
+        color: #fff;
+    }
+    
+
+    @media screen and (max-width: 850px) {
+        .sb__footer-heading h1 {
+            font-size: 34px;
+            line-height: 50px;
+        }
     }
 
-    .info__text{
-        color: #fff;
-        font-size: 16px;
-        text-transform: uppercase;
-        margin-top: 5px;
-        letter-spacing: 2px;
+    @media screen and (max-width: 550px) {
+        .sb__footer-heading h1{
+            font-size: 34px;
+            line-height: 42px;
+        }
 
-        width: 350px;
-        display: inline-block;
-        align-items: flex-start;
-        justify-content: flex-start;
+        .sb__footer-links div {
+            margin: 1rem o;
+        }
+
+        .sb__footer-btn p {
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        .sb__footer-below {
+            flex-direction: column;
+            justify-content: left;
+        }
+
+        .sb__footer-below-links {
+            flex-direction: column;
+        }
+
+        .sb__footer-below-links p {
+            margin-left: 0rem;
+            margin-top: 1rem;
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        .sb__footer-heading h1 {
+            font-size: 27px;
+            line-height: 38px;
+        }
     }
 }
