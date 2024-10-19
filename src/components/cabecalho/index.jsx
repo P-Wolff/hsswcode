@@ -1,9 +1,9 @@
 import './index.scss';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 
 import Logo from '../../assets/images/land-page/logo.svg';
-import { useState } from 'react';
 
 
 
@@ -23,6 +23,13 @@ export default function Navbar() {
     }
 
 
+    const navigate = useNavigate();
+
+    const handleNavigation = (path, sectionId) => {
+        navigate(path, { state: { sectionId } });
+    };
+
+
     return(
         <div className="comp-header pagina">
             <nav className="nav">
@@ -32,19 +39,16 @@ export default function Navbar() {
 
                 <ul id="navbar" className={active}>                
                     <li className="nav__item">
-                        <Link to="/" className="nav__link" > Jeito da HSSW </Link>
+                        <button className="nav__link button" onClick={() => handleNavigation("/", "section1")} > Jeito da HSSW </button>
                     </li>
                     <li className="nav__item">
-                        <Link to="/" className="nav__link" > Como fazemos </Link>
+                    <buttom className="nav__link button" onClick={() => handleNavigation("/", "section2")} > Como fazemos </buttom>
                     </li>
                     <li className="nav__item">
                         <Link to="/sobre" className="nav__link" > Sobre nós </Link>
                     </li>
                     <li className="nav__item">
-                        <Link to="/trabalho" className="nav__link" > Trabalhe conosco </Link>
-                    </li>
-                    <li className="nav__item">
-                        <Link to="/" className="nav__link" > FeedBacks </Link>
+                        <button to="/" className="nav__link button" onClick={() => handleNavigation("/", "section4")} > FeedBacks </button>
                     </li>
 
                     <li className="nav__item">

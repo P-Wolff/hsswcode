@@ -1,10 +1,16 @@
 import './index.scss'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import Logo from '../../assets/images/land-page/logo.svg';
 
 
 export default function Footer () {
+    const navigate = useNavigate();
+
+    const handleNavigation = (path, sectionId) => {
+        navigate(path, { state: { sectionId } });
+    };
+
 
     return (
         <div className='comp-footer pagina'>
@@ -17,22 +23,21 @@ export default function Footer () {
 
                             <h4> Pessoas e empresas que se 
                                 <br /> realizam nunca mais 
-                                <br />são as mesmas. 
-                                <br /><br /> HSSW Code.
-                                <br /> O que persiste é o aprendizado. 
+                                <br />são as mesmas
+                                <br /><br /> HSSW Code
+                                <br /> O que persiste é o aprendizado
                                 </h4>
                         </div>
                         
                         <div className="sb__footer-links_div">
                             <h4> Explore </h4>
-                            <Link className='foot__link' href="/"> Jeito HSSW Code </Link>
-                            <Link className='foot__link' href="/"> Como Fazemos </Link>
+                            <button className="foot__link button" onClick={() => handleNavigation("/", "section1")} > Jeito da HSSW </button>
+                            <button className="foot__link button" onClick={() => handleNavigation("/", "section2")} > Como fazemos </button>
                             <Link className='foot__link' href="/sobre"> Sobre nós </Link>
                         </div>
                         <div className="sb__footer-links_div">
                             <h4></h4>
-                            <Link className='foot__link' href="/trabalho"> Trabalhe conosco </Link>
-                            <Link className='foot__link' href="/"> FeedBacks </Link>
+                            <button to="/" className="foot__link button" onClick={() => handleNavigation("/", "section4")} > FeedBacks </button>
                             <Link className='foot__link' href="/contato"> Contato </Link>
                         </div>
 
@@ -46,6 +51,7 @@ export default function Footer () {
                                 <p><Link className="linkedin" href="#"><i class="fa fa-linkedin"></i></Link></p>
                             </div>
                         </div>
+                    </div>
 
                         <div className="grad-bar"></div>
 
@@ -66,8 +72,6 @@ export default function Footer () {
                             </div>
 
                         </div>
-
-                    </div>
 
                 </div>
             </footer>
