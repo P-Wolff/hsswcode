@@ -48,6 +48,11 @@ import Neon from '../../assets/images/financeiro&seguro/neon.webp';
 import Open from '../../assets/images/financeiro&seguro/Open-Insurance.png.webp';
 import Porto from '../../assets/images/financeiro&seguro/Porto-Seguro.png.webp';
 
+import foto1 from '../../assets/images/feedbacks/Shape.svg';
+import foto2 from '../../assets/images/feedbacks/Shape (1).svg';
+import foto3 from '../../assets/images/feedbacks/Shape (2).svg';
+
+
 
 
 export default function Home() {
@@ -210,9 +215,9 @@ export default function Home() {
               </div>
 
               <div className="info__img">
-                <img src="" alt="" />
+                <img src={foto1} alt="" />
                 <p className="nome">
-
+                  Cassandra Lima 
                 </p>
               </div>
 
