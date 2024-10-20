@@ -217,7 +217,7 @@ export default function Home() {
               <div className="info__img">
                 <img src={foto1} alt="" />
                 <p className="nome">
-                  Cassandra Lima 
+                  Cassandra lima
                 </p>
               </div>
 
