@@ -310,6 +310,12 @@ export default function Home() {
         </div>
 
 
+              <div className="info__img">
+                <img src={foto1} alt="" />
+                <p className="nome">
+                  Cassandra lima
+                </p>
+              </div>
 
         <div className="carousel" ref={section4Ref}>
           {active > 0 && (
