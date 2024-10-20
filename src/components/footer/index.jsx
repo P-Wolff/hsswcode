@@ -1,5 +1,6 @@
 import './index.scss'
 import { Link, useNavigate } from 'react-router-dom';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 import Logo from '../../assets/images/land-page/logo.svg';
 
@@ -21,7 +22,7 @@ export default function Footer () {
                         <div className="sb__footer-links-div">
                             <img src={Logo} alt='HSSW Code' title='HSSW Code' className='logo' />
 
-                            <h4> Pessoas e empresas que se 
+                            <h4 className='text__links-div' > Pessoas e empresas que se 
                                 <br /> realizam nunca mais 
                                 <br />são as mesmas
                                 <br /><br /> HSSW Code
@@ -45,10 +46,10 @@ export default function Footer () {
                         <div className="sb__footer-links_div">
                             <h4>Em breve</h4>
                             <div className="social-icons">
-                                <p><Link className="facebook" href="#"><i class="fa fa-facebook"></i></Link></p>
-                                <p><Link className="twitter" href="#"><i class="fa fa-twitter"></i></Link></p>
-                                <p><Link className="instagram" href="#"><i class="fa fa-instagram"></i></Link></p>
-                                <p><Link className="linkedin" href="#"><i class="fa fa-linkedin"></i></Link></p>
+                                <p><Link className="facebook" to="#"><i className="fa fa-facebook"></i></Link></p>
+                                <p><Link className="twitter" to="#"><i className="fa fa-twitter"></i></Link></p>
+                                <p><Link className="instagram" to="#"><i className="fa fa-instagram"></i></Link></p>
+                                <p><Link className="linkedin" to="#"><i className="fa fa-linkedin"></i></Link></p>
                             </div>
                         </div>
                     </div>

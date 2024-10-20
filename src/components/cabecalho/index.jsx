@@ -42,7 +42,7 @@ export default function Navbar() {
                         <button className="nav__link button" onClick={() => handleNavigation("/", "section1")} > Jeito da HSSW </button>
                     </li>
                     <li className="nav__item">
-                    <buttom className="nav__link button" onClick={() => handleNavigation("/", "section2")} > Como fazemos </buttom>
+                        <buttom className="nav__link button" onClick={() => handleNavigation("/", "section2")} > Como fazemos </buttom>
                     </li>
                     <li className="nav__item">
                         <Link to="/sobre" className="nav__link" > Sobre nós </Link>

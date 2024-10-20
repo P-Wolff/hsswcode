@@ -1,3 +1,5 @@
+
+
 .comp-footer {
 
     .section__padding {
@@ -37,7 +39,7 @@
         color: #e4e2e2;
         display: flex;
         flex-direction: row;
-        gap: 100px;
+        gap: 50px;
         margin-bottom: 3rem;
         font-size: 17px;
         line-height: 23px;
@@ -46,6 +48,10 @@
     .logo {
         width: 15rem;
     }
+    .text__links-div {
+        font-size: 2rem;
+    }
+
 
     .sb__footer-links_div {
         margin-bottom: 3rem;
@@ -261,14 +267,14 @@
     
 
     @media screen and (max-width: 850px) {
-        .sb__footer-heading h1 {
+        .sb__footer-heading h4 {
             font-size: 34px;
             line-height: 50px;
         }
     }
 
     @media screen and (max-width: 550px) {
-        .sb__footer-heading h1{
+        .sb__footer-heading h4{
             font-size: 34px;
             line-height: 42px;
         }
@@ -298,7 +304,7 @@
     }
 
     @media screen and (max-width: 400px) {
-        .sb__footer-heading h1 {
+        .sb__footer-heading h4 {
             font-size: 27px;
             line-height: 38px;
         }
