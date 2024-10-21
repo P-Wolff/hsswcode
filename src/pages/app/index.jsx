@@ -62,7 +62,6 @@ import imgslide5 from '../../assets/images/feedbacks/Miranda.svg';
 export default function Home() {
 
   const section1Ref = useRef(null);
-  const section2Ref = useRef(null);
   const section4Ref = useRef(null);
   
   const location = useLocation();
@@ -74,8 +73,6 @@ export default function Home() {
   
       if (location.state.sectionId === 'section1') {
         section1Ref.current.scrollIntoView(scrollOptions);
-      } else if (location.state.sectionId === 'section2') {
-        section2Ref.current.scrollIntoView(scrollOptions);
       } else if (location.state.sectionId === 'section4') {
         section4Ref.current.scrollIntoView(scrollOptions);
       }
@@ -182,7 +179,9 @@ export default function Home() {
           </div>
 
 
-        <div ref={section2Ref} className="container__sponsors" >
+
+
+        <div className="container__sponsors" >
             <div className="container__sponsors">
               
                 <nav className="group-nav">
