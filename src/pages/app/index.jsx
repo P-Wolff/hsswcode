@@ -61,27 +61,27 @@ import imgslide5 from '../../assets/images/feedbacks/Miranda.svg';
 
 export default function Home() {
 
-  const section1Ref = useRef(null);
-  const section4Ref = useRef(null);
+  const section1Ref = useRef( null );
+  const section4Ref = useRef( null );
   
   const location = useLocation();
   
   
   useEffect(() => {
-    if (location.state?.sectionId) {
+    if ( location.state?.sectionId ) {
       const scrollOptions = { behavior: "smooth", block: "start" };
   
-      if (location.state.sectionId === 'section1') {
-        section1Ref.current.scrollIntoView(scrollOptions);
-      } else if (location.state.sectionId === 'section4') {
-        section4Ref.current.scrollIntoView(scrollOptions);
+      if ( location.state.sectionId === 'section1' ) {
+        section1Ref.current.scrollIntoView( scrollOptions );
+      } else if ( location.state.sectionId === 'section4' ) {
+        section4Ref.current.scrollIntoView( scrollOptions );
       }
     }
-  }, [location]);
+  }, [ location ]);
 
 
 
-  const [activeGroup, setActiveGroup] = useState('varejo'); // Grupo ativo inicialmente
+  const [ activeGroup, setActiveGroup ] = useState( 'varejo' ); 
 
   const groups = [
       { name: 'Varejo', className: 'varejo' },
@@ -93,15 +93,15 @@ export default function Home() {
       { name: 'Financeiro & Seguros', className: 'financeiro_seguros' },
   ];
 
-  const handleGroupClick = (groupName) => {
-      setActiveGroup(groupName);
+  const handleGroupClick = ( groupName ) => {
+      setActiveGroup( groupName );
   };
 
 
 
   
 
-  const [active, setActive] = useState(2); 
+  const [ active, setActive ] = useState( 2 ); 
   const cards = [
     {
       imageUrl: imgslide1,
@@ -137,9 +137,10 @@ export default function Home() {
   return (
 
     
-    <div className="page-home page">
+    <div className="page-home page" >
         <Cabecalho />
       
+
         <section className="headline" >
 
           <div className='estrela'>
@@ -155,20 +156,21 @@ export default function Home() {
 
         </section>
 
-        <div ref={section1Ref} className="section__container">
+
+        <section ref={ section1Ref } className="section__about" >
             <div className="text1">
               <h4 className='text6'>Jeito HSSW Code</h4>
               <p>Transformamos desafios em oportunidades, impulsionados pela inovação 
-                <br /> tecnológica e guiados pela paixão pelo futuro.</p>
+                tecnológica e guiados pela paixão pelo futuro.</p>
             </div>
 
             <div className="text2">
               <p>
                 A HSSW Code é uma empresa de desenvolvimento web que cria soluções digitais 
-                <br /> inovadoras e de alta qualidade. Nossa equipe usa tecnologias de ponta para entregar 
-                <br /> sites e aplicativos personalizados, focados em experiência do usuário, segurança e 
-                <br /> desempenho. Transformamos ideias em realidade, ajudando empresas a alcançar seus 
-                <br /> objetivos digitais.
+                inovadoras e de alta qualidade. Nossa equipe usa tecnologias de ponta para entregar 
+                sites e aplicativos personalizados, focados em experiência do usuário, segurança e 
+                desempenho. Transformamos ideias em realidade, ajudando empresas a alcançar seus 
+                objetivos digitais.
               </p>
 
               <button type="button" className="more__about">
@@ -176,12 +178,11 @@ export default function Home() {
                 <TiArrowRightThick className="i" />
               </button>
             </div>
-          </div>
+
+        </section>
 
 
-
-
-        <div className="container__sponsors" >
+        <section className="container__sponsors" >
             <div className="container__sponsors">
               
                 <nav className="group-nav">
@@ -291,9 +292,10 @@ export default function Home() {
 
             </div>
 
-        </div>
+        </section>
 
-        <div className="section__container">
+
+        <section className="section__contato" >
           <div className="text3">
               <p>Envie uma mensagem para nossos especialistas.</p>
           </div>
@@ -306,49 +308,56 @@ export default function Home() {
 
               <button type="button" className="button"><Link to='/contato' className='button-link'> Contato </Link></button>
           </div>
+        </section>
+
+        <div className="carousel-feedbacks" ref={ section4Ref } >
+          <div className="tittle2">
+            <h1>FeedBacks</h1>
+          </div>
+          <div className="carousel" >
+              
+
+
+            {active > 0 && (
+              <button className="nav left" onClick={() => setActive(active - 1)}>
+                <TiChevronLeftOutline />
+              </button>
+            )}
+
+            {cards.map((card, i) => (
+              <div
+                key={i}
+                className={`card-container ${active === i ? 'active' : ''}`}
+                style={{
+                  '--active': i === active ? 1 : 0,
+                  '--offset': (active - i) / 3,
+                  '--direction': Math.sign(active - i),
+                  '--abs-offset': Math.abs(active - i) / 3,
+                  pointerEvents: active === i ? 'auto' : 'none',
+                  opacity: active === i ? 1 : 0.5,
+                  zIndex: active === i ? 10 : 0,
+                  transform: active === i
+                    ? 'scale(1) translateZ(0)'
+                    : 'scale(0.8) translateZ(-100px)',
+                }}
+              >
+                <Card title={card.title} content={card.content} imageUrl={card.imageUrl} />
+              </div>
+            ))}
+
+            {active < cards.length - 1 && (
+              <button className="nav right" onClick={() => setActive(active + 1)}>
+                <TiChevronRightOutline />
+              </button>
+            )}
+          </div>
         </div>
-
-
-
-        <div className="carousel" ref={section4Ref}>
-          {active > 0 && (
-            <button className="nav left" onClick={() => setActive(active - 1)}>
-              <TiChevronLeftOutline />
-            </button>
-          )}
-
-          {cards.map((card, i) => (
-            <div
-              key={i}
-              className={`card-container ${active === i ? 'active' : ''}`}
-              style={{
-                '--active': i === active ? 1 : 0,
-                '--offset': (active - i) / 3,
-                '--direction': Math.sign(active - i),
-                '--abs-offset': Math.abs(active - i) / 3,
-                pointerEvents: active === i ? 'auto' : 'none',
-                opacity: active === i ? 1 : 0.5,
-                zIndex: active === i ? 10 : 0,
-                transform: active === i
-                  ? 'scale(1) translateZ(0)'
-                  : 'scale(0.8) translateZ(-100px)',
-              }}
-            >
-              <Card title={card.title} content={card.content} imageUrl={card.imageUrl} />
-            </div>
-          ))}
-
-          {active < cards.length - 1 && (
-            <button className="nav right" onClick={() => setActive(active + 1)}>
-              <TiChevronRightOutline />
-            </button>
-          )}
-        </div>
-
+        
 
         <Footer/>
-      
+
     </div>
+
   );
 }
 

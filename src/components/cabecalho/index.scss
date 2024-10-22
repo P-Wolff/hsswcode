@@ -5,10 +5,11 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 10vh;
-    background: #293358;
+    height: 12vh;
+    background: #020e38f6;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.199) ;
     font-family: 'lato';
+    font-size: 2rem;
   }
 
 
@@ -16,8 +17,8 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    gap: 3rem;
-    
+    gap: 9rem;
+
     position: relative;
   }
 
@@ -105,5 +106,12 @@
     background: transparent;
     color: #fff;
     border: none;
-}
+    font-size: 2rem;
+  }
+  
+  #navbar {
+    font-size: 2rem;
+  }
+
+
 }
