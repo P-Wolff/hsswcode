@@ -1,5 +1,7 @@
 import './index.scss';
 import { Link } from 'react-router-dom';
+import imagem from '../../assets/images/trabalhe_conosco.svg';
+
 
 import Cabecalho from '../../components/cabecalho';
 import Footer from '../../components/footer';
@@ -27,11 +29,11 @@ export default function SobreNos() {
       </section>
 
 
-        <div className="text8">
-          <h4 className='text9'>Sobre nós</h4>
+      <div className="text8">
+        <h4 className='text9'>Sobre nós</h4>
 
-          <p>A HSSW Code é a consultoria de negócios & tecnologia que oferece a compreensão dos desafios de agora com disposição para conquistar o próximo passo na jornada de transformação de seus clientes e colaboradores.</p>
-        </div>
+        <p>A HSSW Code é a consultoria de negócios & tecnologia que oferece a compreensão dos desafios de agora com disposição para conquistar o próximo passo na jornada de transformação de seus clientes e colaboradores.</p>
+      </div>
       <section className="section__about_us" >
 
         <div className='info_separar'>
@@ -77,7 +79,7 @@ export default function SobreNos() {
 
       <section className='section__work'>
         <div className="img_work">
-          <img src="" alt="" />
+          <img src={imagem} alt="Trabalhe conosco" />
         </div>
 
         <div className="text13">
