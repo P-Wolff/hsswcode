@@ -1,5 +1,7 @@
 import './index.scss';
 import { Link } from 'react-router-dom';
+import imagem from '../../assets/images/trabalhe_conosco.svg';
+
 
 import Cabecalho from '../../components/cabecalho';
 import Footer from '../../components/footer';
@@ -27,11 +29,11 @@ export default function SobreNos() {
       </section>
 
 
-        <div className="text8">
-          <h4 className='text9'>Sobre nós</h4>
+      <div className="text8">
+        <h4 className='text9'>Sobre nós</h4>
 
-          <p>A HSSW Code é a consultoria de negócios & tecnologia que oferece a compreensão dos desafios de agora com disposição para conquistar o próximo passo na jornada de transformação de seus clientes e colaboradores.</p>
-        </div>
+        <p>A HSSW Code é a consultoria de negócios & tecnologia que oferece a compreensão dos desafios de agora com disposição para conquistar o próximo passo na jornada de transformação de seus clientes e colaboradores.</p>
+      </div>
       <section className="section__about_us" >
 
         <div className='info_separar'>
@@ -73,27 +75,29 @@ export default function SobreNos() {
             <br /> Simplicidade e Pragmatismo
           </p>
         </div>
+
       </section>
 
-      <section className='section__work'>
-        <div className="img_work">
-          <img src="" alt="" />
-        </div>
 
-        <div className="text13">
-          <h1> Trabalhe conosco </h1>
-          <p>
-            A HSSW Code é uma empresa de desenvolvimento web que cria soluções digitais 
-            inovadoras e de alta qualidade. Nossa equipe usa tecnologias de ponta para entregar 
-            sites e aplicativos personalizados, focados em experiência do usuário, segurança e 
-            desempenho. Transformamos ideias em realidade, ajudando empresas a alcançar seus 
-            objetivos digitais.
-          </p>
-          
-          <button type="button" className="more__about">
-            <Link to="/contato" className="button-link"> Contato </Link>
-          </button>
-        </div>
+      <section className='section__work'>
+          <div className="img_work">
+            <img src={imagem} alt="Trabalhe conosco" />
+          </div>
+
+          <div className="text13">
+            <h1> Trabalhe conosco </h1>
+            <p>
+              A HSSW Code é uma empresa de desenvolvimento web que cria soluções digitais 
+              inovadoras e de alta qualidade. Nossa equipe usa tecnologias de ponta para entregar 
+              sites e aplicativos personalizados, focados em experiência do usuário, segurança e 
+              desempenho. Transformamos ideias em realidade, ajudando empresas a alcançar seus 
+              objetivos digitais.
+            </p>
+            
+            <button type="button" className="more__about">
+              <Link to="/contato" className="button-link"> Contato </Link>
+            </button>
+          </div>
 
       </section>
 
