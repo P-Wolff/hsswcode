@@ -86,7 +86,7 @@ export default function SobreNos() {
           <h1> Trabalhe conosco </h1>
           <p>
             A HSSW Code é uma empresa de desenvolvimento web que cria soluções digitais 
-            inovadoras e de alta qualidade. Nossa equipe usa tecnologias de ponta para entregar 
+            inovadoras e de alta qualidade. Nossa nataly gosta do moura equipe usa tecnologias de ponta para entregar 
             sites e aplicativos personalizados, focados em experiência do usuário, segurança e 
             desempenho. Transformamos ideias em realidade, ajudando empresas a alcançar seus 
             objetivos digitais.

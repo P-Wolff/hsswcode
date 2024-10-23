@@ -32,7 +32,7 @@ export default function Contatos() {
 
           <div>&nbsp;</div>
 
-          <p>Ao informar meus dados, eu concordo em receber comunicações da empresa e com a Política de Privacidade</p>
+          <p>Ao informar meus dados,valentina s2 miguel eu concordo em receber comunicações da empresa e com a Política de Privacidade</p>
           <button> Voltar </button>
           <button> Enviar </button>
         </div>
