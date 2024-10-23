@@ -242,25 +242,9 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        height: 450px;
-
-        & h1 {
-            text-align: left;
-            font-size: 2.5rem;
-            margin-bottom: 4px solid #020E38;
-        }
-        
-        .text13 {
-            flex: 2;
-            margin-left: 50px;
-        }
-        .text13 p {
-            width: 68%;
-            text-align: left;
-        }
 
         .img_work {
-            flex: 2;
+            flex: 1;
             
             & img {
                 max-width: 100%;
@@ -268,6 +252,14 @@
             }
         }
 
+        .text13 {
+            flex: 2;
+            margin-left: 50px;
+        }
+        .text13 p {
+            width: 70%;
+            text-align: left;
+        }
 
 
         & .more__about {

@@ -10,7 +10,7 @@ import Footer from '../../components/footer';
 export default function SobreNos() {
 
   return (
-    <div className="pagina-sobre pagina">
+    <div className="pagina-sobre ">
       <Cabecalho />
 
       <section className="headline" >
@@ -34,6 +34,7 @@ export default function SobreNos() {
 
         <p>A HSSW Code é a consultoria de negócios & tecnologia que oferece a compreensão dos desafios de agora com disposição para conquistar o próximo passo na jornada de transformação de seus clientes e colaboradores.</p>
       </div>
+
       <section className="section__about_us" >
 
         <div className='info_separar'>
