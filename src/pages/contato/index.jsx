@@ -27,7 +27,7 @@ export default function Contatos() {
 
 
   return (
-    <div className="pagina-contato pagina">
+    <div className="pagina-contato ">
       <Cabecalho />
 
       <h1>FALE CONOSCO</h1>
