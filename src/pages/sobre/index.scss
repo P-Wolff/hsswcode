@@ -240,8 +240,10 @@
 
     .section__work {
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
+        width: 100%;
+        height: 400px;
 
         .img_work {
             flex: 1;
@@ -252,18 +254,31 @@
             }
         }
 
+        .text13{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+
+        }
         .text13 {
-            flex: 2;
+            flex: 1.5;
             margin-left: 50px;
         }
         .text13 p {
-            width: 70%;
+            width: 90%;
             text-align: left;
+        }
+        .titulo2 {
+            font-size: 3.5rem;
+            color: #020E38;
+            border-bottom: 5px solid #020E38;
+            width: 37%;
         }
 
 
+
         & .more__about {
-            margin-top: 10px;
             position: relative;
             display: inline-flex;
             align-items: center;
@@ -271,7 +286,6 @@
             border: none;
             cursor: pointer;
             font-size: 2rem;
-            padding: 10px 20px;
             color: #020E38;
             transition: all 0.3s;
             text-decoration: none;

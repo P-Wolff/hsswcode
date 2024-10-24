@@ -85,7 +85,7 @@ export default function SobreNos() {
           </div>
 
           <div className="text13">
-            <h1> Trabalhe conosco </h1>
+            <h1 className='titulo2'> Trabalhe conosco </h1>
             <p>
               A HSSW Code é uma empresa de desenvolvimento web que cria soluções digitais 
               inovadoras e de alta qualidade. Nossa equipe usa tecnologias de ponta para entregar 

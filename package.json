@@ -12,6 +12,7 @@
     "@testing-library/user-event": "^13.5.0",
     "@vfx-js/core": "^0.5.2",
     "compass": "^0.1.1",
+    "font-awesome-icons": "^1.6.0",
     "ionicons": "^7.4.0",
     "npx": "^10.2.2",
     "react": "^18.3.1",
