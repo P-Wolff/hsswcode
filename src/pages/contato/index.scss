@@ -1,11 +1,127 @@
 .pagina-contato {
-    text-align: center;
 
-
-  .voltar {
-  width: 30px;
+  /* Layout grid 2x2 */
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100vh; /* Ocupa a tela toda */
+    box-sizing: border-box;
+    position: relative; /* Para controle do z-index */
+    z-index: 1; 
   }
 
+  .group {
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 2; /* Mantém sempre acima do cabeçalho */
+  }
+
+  .group.active {
+    grid-column: span 2;
+    grid-row: span 2;
+    height: 100%; /* Usa toda a altura da div pai */
+    width: 100%;
+    z-index: 3; /* Garante que o grupo ativo fique acima dos outros elementos */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .group .title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    transition: transform 0.5s ease;
+  }
+
+  .group .description {
+    font-size: 16px;
+    margin-bottom: 20px;
+    transition: transform 0.5s ease;
+  }
+
+  .group.active .title,
+  .group.active .description {
+    transform: translateX(-100px); /* Move o texto para a esquerda ao ativar */
+  }
+
+  .group-right.active .title,
+  .group-right.active .description {
+    transform: translateX(100px); /* Move o texto para a direita ao ativar */
+  }
+
+  .formulario {
+    display: none; /* Formulário inicialmente oculto */
+    flex-grow: 1;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .group.active .formulario {
+    display: block;
+    opacity: 1;
+    transform: translateX(100px); /* Animação para aparecer da direita para a esquerda */
+  }
+
+  .group-left.active .formulario {
+    transform: translateX(-100px); /* Animação para aparecer da esquerda para a direita */
+  }
+
+  .group-right.active .formulario {
+    transform: translateX(100px); /* Animação para aparecer da direita para a esquerda */
+  }
+
+  .formulario input, .formulario select, .formulario textarea {
+    margin: 10px 0;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  button {
+    margin-top: 10px;
+    padding: 10px;
+  }
+
+  .back-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .back-button:hover {
+    background-color: #0056b3;
+  }
+
+  /* Controla a div do cabeçalho */
+  header {
+    position: relative;
+    z-index: 10; /* Garante que o cabeçalho esteja acima dos grupos */
+  }
+
+  footer {
+    z-index: 1;
+    position: relative;
+  }
 
 }
-
