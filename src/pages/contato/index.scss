@@ -3,11 +3,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #ffffff;
 
     .box-contacts {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: center;
       width: 100%;
       max-width: 1200px;
       position: relative;
@@ -24,100 +25,107 @@
         min-height: 200px;
         cursor: pointer;
         z-index: 1; 
-
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
 
+        
         &.active {
-          position: absolute; 
+          position: absolute;
           top: 0;
           left: 0;
-          width: 60%; 
-          height: 100%; 
-          background-color: #ffffff;
+          width: 100%; 
+          height: auto; 
+          background-color: #f0f0f0;
           color: #020E38;
           z-index: 10; 
-          transform: none; 
-        }
-
-
-        .texto {
-          z-index: 1;
-        }
-        .texto p {
-          text-align: left;
-          width: 70%;
-          color: #fff;
-        }
-
-        .content-container {
+          transform: none;
           display: flex;
-          justify-content: space-around;
-          align-items: flex-start;
+          flex-direction: row; 
+        }
+
+        .card-content {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
           width: 100%;
-          margin: 20px;
-
-          .form {
-            flex: 1;
-            margin-right: 20px;
-            z-index: 2;
-
-            input, select {
-              width: 100%;
-              margin-bottom: 10px;
-              padding: 8px;
-              border: 1px solid #ccc;
-              border-radius: 4px;
-            }
-
-            button {
-              padding: 10px 20px;
-              background-color: #020E38;
-              color: white;
-              border: none;
-              cursor: pointer;
-              border-radius: 4px;
-              margin-top: 10px;
-            }
-
-            .back-button {
-              margin-right: 10px;
-              background-color: #888;
-            }
-          }
-
-          .icons {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            font-size: 16px;
-            margin-left: 20px;
-          }
-
-          .icons svg {
-            margin-right: 8px;
+          justify-content: space-between;
+&.active {
+            flex-direction: row; 
           }
         }
       }
+
+      .texto {
+        background-color: #02ff00; 
+        color: #fff;
+        padding: 30px;
+        width: 40%; 
+        text-align: center;
+
+       
+        .group.active & {
+          color: #020E38;
+          width: 40%; 
+        }
+      }
+
+      .form-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        width: 100%; 
+        padding: 20px;
+        margin: 0;
+
+        .formulario {
+          width: 100%;
+
+          input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+          }
+
+          button {
+            padding: 10px 20px;
+            background-color: #00264d;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-top: 10px;
+          }
+
+          button:hover {
+            background-color: #001c3d;
+          }
+
+          label {
+            font-size: 14px;
+            color: #020E38;
+          }
+
+          .back-button {
+            background-color: #888;
+            margin-right: 10px;
+          }
+        }
+      }
+
+      .privacy {
+        font-size: 12px;
+        color: #020E38;
+      }
+
+      .privacy a {
+        color: #00264d;
+        text-decoration: none;
+      }
     }
-  }
-
-
-  header {
-    position: relative;
-    top: 0;
-    width: 100%;
-    z-index: 100; 
-  }
-
-  footer {
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    z-index: 100; 
   }
 }
