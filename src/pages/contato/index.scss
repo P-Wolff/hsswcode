@@ -1,76 +1,123 @@
 .pagina-contato {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    .container {
+    .box-contacts {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-  
-      .box-contacts {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 1200px;
+      position: relative;
+
+      .group {
+        width: 40%;
+        margin: 10px;
+        padding: 20px;
+        border: 1px solid #020E38;
+        border-radius: 5px;
+        background: #020E38;
+        transition: background-color 0.3s ease, transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+        position: relative;
+        min-height: 200px;
+        cursor: pointer;
+        z-index: 1; 
+
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        
-        .group {
-          flex: 1 1 45%; // Adjusts to be responsive
-          margin: 10px;
-          padding: 20px;
-          border: 1px solid #020E38;
-          border-radius: 5px;
-          position: relative; // Set position relative for positioning children
-          min-height: 200px; // Set a minimum height for the cards
-          transition: background-color 0.3s ease, transform 0.3s ease;
-          cursor: pointer;
-      
-  
-          &.active {
-            background-color: #f0f0f0; // Change color when active
-            transform: scale(1.05); // Slightly enlarge when active
-            z-index: 10; // Ensure it overlaps others
-          }
-  
-          .texto {
-            position: absolute; // Position it absolutely
-            top: 50%; // Center vertically
-            left: 50%; // Center horizontally
-            transform: translate(-50%, -50%); // Offset to truly center
-            z-index: 1; // Ensure it appears above the card
-            text-align: center; // Center text
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 100%; // Take full width
-            height: 100%; // Take full height
-          }
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-          .content-container {
-            display: flex; // Use flexbox for layout
-            justify-content: space-between; // Space between form and icons
-            align-items: flex-start; // Align items to the start
-          
-            .form {
-              flex: 1; // Allow the form to take available space
-              margin-right: 20px; // Space between form and icons
-            }
-          
-            .icons {
-              display: flex; // Show icons in a row
-              flex-direction: column; // Stack icons vertically
-              justify-content: center; // Center icons vertically
-              align-items: center; // Center icons horizontally
-            }
-          }
-          
-
+        &.active {
+          position: absolute; 
+          top: 0;
+          left: 0;
+          width: 60%; 
+          height: 100%; 
+          background-color: #ffffff;
+          color: #020E38;
+          z-index: 10; 
+          transform: none; 
         }
 
+
+        .texto {
+          z-index: 1;
+        }
+        .texto p {
+          text-align: left;
+          width: 70%;
+          color: #fff;
+        }
+
+        .content-container {
+          display: flex;
+          justify-content: space-around;
+          align-items: flex-start;
+          width: 100%;
+          margin: 20px;
+
+          .form {
+            flex: 1;
+            margin-right: 20px;
+            z-index: 2;
+
+            input, select {
+              width: 100%;
+              margin-bottom: 10px;
+              padding: 8px;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+            }
+
+            button {
+              padding: 10px 20px;
+              background-color: #020E38;
+              color: white;
+              border: none;
+              cursor: pointer;
+              border-radius: 4px;
+              margin-top: 10px;
+            }
+
+            .back-button {
+              margin-right: 10px;
+              background-color: #888;
+            }
+          }
+
+          .icons {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            font-size: 16px;
+            margin-left: 20px;
+          }
+
+          .icons svg {
+            margin-right: 8px;
+          }
+        }
       }
-
     }
+  }
 
-  
 
+  header {
+    position: relative;
+    top: 0;
+    width: 100%;
+    z-index: 100; /* Garante que fique no topo, mas não flutue */
+  }
+
+  footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    z-index: 100; /* Garante que fique no rodapé, mas não flutue */
+  }
 }
