@@ -111,13 +111,13 @@
     position: relative;
     top: 0;
     width: 100%;
-    z-index: 100; /* Garante que fique no topo, mas não flutue */
+    z-index: 100; 
   }
 
   footer {
     position: relative;
     bottom: 0;
     width: 100%;
-    z-index: 100; /* Garante que fique no rodapé, mas não flutue */
+    z-index: 100; 
   }
 }

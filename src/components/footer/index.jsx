@@ -46,10 +46,10 @@ export default function Footer () {
                         <div className="sb__footer-links_div">
                             <h4>Em breve</h4>
                             <div className="social-icons">
-                                <p><Link className="facebook" to="#"><i className="fa fa-facebook"></i></Link></p>
-                                <p><Link className="twitter" to="#"><i className="fa fa-twitter"></i></Link></p>
-                                <p><Link className="instagram" to="#"><i className="fa fa-instagram"></i></Link></p>
-                                <p><Link className="linkedin" to="#"><i className="fa fa-linkedin"></i></Link></p>
+                                <p><Link className="facebook" to="#"><img src="../../assets/images/icones/bxl-facebook.svg" alt="facebook" /></Link></p>
+                                <p><Link className="twitter" to="#"><img src="../../assets/images/icones/bxl-twitter.svg" alt="twitter" /></Link></p>
+                                <p><Link className="instagram" to="#"><img src="../../assets/images/icones/bxl-instagram.svg" alt="instagram" /></Link></p>
+                                <p><Link className="linkedin" to="#"><img src="../../assets/images/icones/bxl-linkedin-square.svg" alt="linkedin" /></Link></p>
                             </div>
                         </div>
                     </div>
