@@ -1,131 +1,203 @@
 .pagina-contato {
-  .container {
+
+
+
+  .contatos-page {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #ffffff;
+    background-color: #001f3f; 
+    color: #fff;
+    padding: 20px;
 
-    .box-contacts {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+    .tabs {
       width: 100%;
-      max-width: 1200px;
-      position: relative;
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 20px;
 
-      .group {
-        width: 40%;
-        margin: 10px;
-        padding: 20px;
-        border: 1px solid #020E38;
-        border-radius: 5px;
-        background: #020E38;
-        transition: background-color 0.3s ease, transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+      button {
         position: relative;
-        min-height: 200px;
+        background: none;
+        border: none;
+        color: #bfbfbf;
+        font-size: 2rem;
+        padding: 30px 40px;
         cursor: pointer;
-        z-index: 1; 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        transition: color 0.3s, background-color 0.3s;
+        border-left: 2px solid transparent; 
+        border-right: 2px solid transparent; 
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          height: 1px;
+          background-color: #bfbfbf;
+          transition: opacity 0.3s;
+          opacity: 1;
+        }
 
         
+        &:hover, &.active {
+          color: #ffd700;
+          background-color: rgba(255, 215, 0, 0.2); 
+
+          &::after {
+            opacity: 0; 
+          }
+          border-left: 2px solid #ffd700;
+          border-right: 2px solid #ffd700;
+        }
+
         &.active {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%; 
-          height: auto; 
-          background-color: #f0f0f0;
-          color: #020E38;
-          z-index: 10; 
-          transform: none;
-          display: flex;
-          flex-direction: row; 
-        }
-
-        .card-content {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          width: 100%;
-          justify-content: space-between;
-&.active {
-            flex-direction: row; 
+          &::after {
+            opacity: 0; 
           }
         }
-      }
 
-      .texto {
-        background-color: #02ff00; 
-        color: #fff;
-        padding: 30px;
-        width: 40%; 
-        text-align: center;
-
-       
-        .group.active & {
-          color: #020E38;
-          width: 40%; 
+        &:hover {
+          
+          box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
         }
-      }
-
-      .form-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: flex-start;
-        width: 100%; 
-        padding: 20px;
-        margin: 0;
-
-        .formulario {
-          width: 100%;
-
-          input, textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-          }
-
-          button {
-            padding: 10px 20px;
-            background-color: #00264d;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-            border-radius: 4px;
-            margin-top: 10px;
-          }
-
-          button:hover {
-            background-color: #001c3d;
-          }
-
-          label {
-            font-size: 14px;
-            color: #020E38;
-          }
-
-          .back-button {
-            background-color: #888;
-            margin-right: 10px;
-          }
-        }
-      }
-
-      .privacy {
-        font-size: 12px;
-        color: #020E38;
-      }
-
-      .privacy a {
-        color: #00264d;
-        text-decoration: none;
       }
     }
+              
+    .form-content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 80%;
+
+      .info-content {
+        max-width: 300px; 
+        margin-right: 20px;
+
+        h2 {
+          font-size: 24px;
+          color: #ffd700;
+          margin-bottom: 10px;
+        }
+
+        p {
+          font-size: 16px;
+          color: #bfbfbf;
+          line-height: 1.5;
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+
+    .contatos-form {
+      background-color: transparent;
+      width: 50%;
+      display: flex;
+      flex-wrap: wrap; 
+      
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        width: 48%; 
+        margin-bottom: 20px;
+        padding: 1rem 1.75rem;
+        font-size: 1.25rem;
+    
+        label {
+          font-size: 16px;
+          color: #bfbfbf;
+          margin-bottom: 5px;
+          
+        }
+    
+        input,
+        textarea {
+          background-color: transparent;
+          border: none;
+          border-bottom: 1px solid #bfbfbf;
+          color: #fff;
+          font-size: 16px;
+          padding: 5px;
+          outline: none;
+    
+          &:focus {
+            border-bottom: 1px solid #ffd700;
+          }
+        }
+
+      }
+    
+      .full-width {
+        width: 100%; 
+      }
+    
+      .privacy {
+        font-size: 14px;
+        color: #bfbfbf;
+        width: 100%; 
+    
+        a {
+          color: #ffd700;
+          text-decoration: underline;
+        }
+      }
+    
+      .submit-button {
+        background-color: #ffd700;
+        border: none;
+        color: #001f3f;
+        font-size: 16px;
+        padding: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        width: 100%; 
+        margin-top: 10px;
+    
+        &:hover {
+          background-color: #e5c100;
+        }
+      }
+
+    }
+
+    .custom-select {
+      position: relative;
+      cursor: pointer;
+      background-color: transparent; 
+      color: #fff;
+      border: none;
+    
+      .selected-option {
+        padding: 5px;
+        border-bottom: 1px solid #bfbfbf; 
+      }
+    
+      .options {
+        display: none; 
+        position: absolute;
+        background-color: #001f3f; 
+        width: 100%;
+        z-index: 10;
+    
+        &.open {
+          display: block; 
+        }
+    
+        div {
+          padding: 5px;
+          color: #bfbfbf; 
+    
+          &:hover {
+            background-color: #ffd700; 
+            color: #001f3f; 
+          }
+        }
+      }
+    }
+    
+
   }
+
 }
