@@ -62,6 +62,23 @@ export default function Contatos() {
     <div className="pagina-contato">
       <Cabecalho />
 
+      <section className="headline" >
+        <div className='estrela'>
+          <div id="stars"></div>
+          <div id="stars2"></div>
+          <div id="stars3"></div>
+        </div>
+      </section>
+
+
+      <div className="texto-entrada">
+        <div className="entrada-texto">
+          <h3>Fale Conosco</h3>
+          <p>Estamos aqui para caminhar ao seu lado. Se você tem perguntas, dúvidas ou quer saber mais sobre como podemos ajudar a transformar o seu negócio, entre em contato. Juntos, podemos construir soluções que fazem a diferença. Vamos conversar</p>
+        </div>
+      </div>
+
+
       <div className="contatos-page">
         <div className="tabs">
           <button className={activeTab === 'Solucoes' ? 'active' : ''} onClick={() => setActiveTab('Solucoes')}>Soluções</button>
@@ -124,8 +141,7 @@ function Form({ isDropdownOpen, toggleDropdown, selectedOption, selectOption }) 
 
 
       <div className="form-group full-width">
-        <label htmlFor="mensagem">Como podemos ajudar?</label>
-        <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+        <textarea id="mensagem" name="mensagem" rows="4" placeholder='Como podemos ajudar?'></textarea>
       </div>
 
 

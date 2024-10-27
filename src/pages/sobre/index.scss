@@ -103,28 +103,7 @@
                     box-shadow: $shadows-big;
                 }
             }
-            
-            #title {
-                position: absolute;
-                top: 45%;
-                left: 0;
-                right: 0;
-                color: #FFF;
-                text-align: center;
-                font-family: 'lato', sans-serif;
-                font-weight: 300;
-                font-size: 50px;
-                letter-spacing: 10px;
-                margin-top: -60px;
-                padding-left: 10px;
-            
-                > span {
-                    background: -webkit-linear-gradient(#ffffff, #b0c6d8);
-                    background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                }
-            }
-            
+                        
             @keyframes animStar {
                 from {
                     transform: translateY(0px);
