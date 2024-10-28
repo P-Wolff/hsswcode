@@ -1,0 +1,297 @@
+
+
+.page-home{
+
+
+    .headline {
+        width: 100%;
+        height: 80vh;
+        min-height: 450px;
+        background: radial-gradient(ellipse at bottom, #1B2735 0%, #020E38 100%);
+        height: 90vh;
+        min-height: 605px;
+        background: url(../../assets/images/land-page/containerheader.svg) no-repeat center center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+
+        > h1, p {
+            color: #fff;
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        > h1 {
+            font-size: 2.2rem;
+        }
+
+        @media only screen and (max-width: 720px) { 
+            h1 {
+                font-size: 1.9rem;
+            }
+            p {
+                font-size: 0.8rem;
+            }
+            
+            .headline {
+                height: 25vh;
+            }
+            
+        }
+
+        & .estrela {
+
+            @function multiple-box-shadow($n) {
+                $value: '#{random(2000)}px #{random(2000)}px #FFF';
+                @for $i from 2 through $n {
+                    $value: '#{$value}, #{random(2000)}px #{random(2000)}px #FFF';
+                }
+                @return unquote($value);
+            }
+            
+            $shadows-small: multiple-box-shadow(700);
+            $shadows-medium: multiple-box-shadow(200);
+            $shadows-big: multiple-box-shadow(100);
+            
+            
+            #stars {
+                width: 1px;
+                height: 1px;
+                background: transparent;
+                box-shadow: $shadows-small;
+                animation: animStar 50s linear infinite;
+            
+                &:after {
+                    content: " ";
+                    position: absolute;
+                    top: 2000px;
+                    width: 1px;
+                    height: 1px;
+                    background: transparent;
+                    box-shadow: $shadows-small;
+                }
+            }
+            
+            #stars2 {
+                width: 2px;
+                height: 2px;
+                background: transparent;
+                box-shadow: $shadows-medium;
+                animation: animStar 100s linear infinite;
+            
+                &:after {
+                    content: " ";
+                    position: absolute;
+                    top: 2000px;
+                    width: 2px;
+                    height: 2px;
+                    background: transparent;
+                    box-shadow: $shadows-medium;
+                }
+            }
+            
+            #stars3 {
+                width: 3px;
+                height: 3px;
+                background: transparent;
+                box-shadow: $shadows-big;
+                animation: animStar 150s linear infinite;
+            
+                &:after {
+                    content: " ";
+                    position: absolute;
+                    top: 2000px;
+                    width: 3px;
+                    height: 3px;
+                    background: transparent;
+                    box-shadow: $shadows-big;
+                }
+            }
+            
+            #title {
+                position: absolute;
+                top: 45%;
+                left: 0;
+                right: 0;
+                color: #FFF;
+                text-align: center;
+                font-family: 'lato', sans-serif;
+                font-weight: 300;
+                font-size: 50px;
+                letter-spacing: 10px;
+                margin-top: -60px;
+                padding-left: 10px;
+            
+                > span {
+                    background: -webkit-linear-gradient(#ffffff, #b0c6d8);
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+            
+            @keyframes animStar {
+                from {
+                    transform: translateY(0px);
+                }
+                to {
+                    transform: translateY(-2000px);
+                }
+            }
+        }     
+
+    }
+
+
+    .section__about {
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        width: 100%;
+        height: 400px;
+        box-shadow: 0 0 10px rgba( 0, 0, 0, 0.1 );
+
+        
+        & .text1, & .text2 {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 30px;
+            margin-bottom: 70px;
+        }
+    
+        & .text1 p {
+            margin-top: 60px;
+            font-size: 2.3rem;
+            text-align: left;
+        }
+    
+        & .text2 p {
+            margin-top: 170px;
+            font-size: 2.3rem;
+            text-align: left;
+            width: 100%;
+        }
+        
+        & .text6 {
+            font-size: 4rem;
+            text-align: left;
+            border-bottom: 5px solid #020E38;
+        }
+
+
+        & .more__about {
+            margin-top: 10px;
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 2rem;
+            padding: 10px 20px;
+            color: #020E38;
+            transition: all 0.3s;
+            text-decoration: none;
+    
+            .button-link {
+                color: #fff;
+                text-decoration: none;
+                background-color: #020E38;
+                padding: 10px 20px;
+                transition: all 0.3s ease;
+                display: inline-block;
+            }
+        
+            .i {
+                margin-left: 10px;
+                font-size: 1.5rem;
+                transition: transform 0.3s ease;
+            }
+        
+            &:hover .i {
+                transform: rotate(45deg); /* Rotaciona a seta para a diagonal */
+            }
+        
+            &:hover .button-link {
+                background-color: rgb(13, 13, 13);
+                background: linear-gradient(153deg, rgba(13,13,13,1) 0%, rgba(5,242,131,1) 0%, rgba(5,175,242,1) 100%);
+                background-clip: text;
+                color: transparent;
+                animation: animated 4s linear infinite;
+            }
+        
+            @keyframes animated {
+                to { background-position-x: 161px; }
+            }
+        }
+    }
+    
+
+    .section__contato {
+        display: flex;
+        justify-content: space-around;
+        text-align: start;
+        width: 100%;
+        height: 400px;
+        padding: 30px;
+        box-shadow: 0 0 10px rgba( 0, 0, 0, 0.1 );
+
+        & .text3, & .text4 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            margin: 0px 50px 50px 50px;
+        }
+        
+        & .text3 {
+            font-size: 2.6rem;
+            display: flex; 
+            align-items: baseline; 
+            min-height: 100%; 
+            width: 25%;
+        }
+        & .text3 p {
+            text-align: left;
+        }
+        
+        & .text4 {
+            font-size: 2.6rem;
+            display: flex; 
+            align-items: baseline; 
+            min-height: 100%; 
+            width: 41%;
+        }
+        & .text4 p {
+            text-align: left;
+        }
+    
+        & .button {
+            margin-top: 50px;
+        }
+    
+        & .button-link {
+            background-color: #020E38;
+            border: none;
+            padding: 10px 20px;
+            color: #fff;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .button-link:active, 
+        .button-link:focus, 
+        .button-link:hover {
+            color: #fff;
+            background: rgb(13, 13, 13);
+            background: linear-gradient(153deg, rgba(13, 13, 13, 1) 0%, rgba(5, 242, 131, 1) 0%, rgba(5, 175, 242, 1) 100%) transparent;
+        }
+    }
+ 
+
+}
