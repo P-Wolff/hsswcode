@@ -43,9 +43,9 @@ export default function Home() {
             <div id="stars2"></div>
             <div id="stars3"></div>
             <div id="title">
-              <span>HSSW Code</span>
+              <span style={{ fontWeight: "bolder", background: "#fff", WebkitBackgroundClip: "text", color: "transparent" }}>HSSW Code</span>
               <br />
-              <span>A tecnologia e o mundo estão a evoluir, e você?</span>
+              <span style={{fontWeight:"lighter"}}>A tecnologia e o mundo estão a evoluir, e você?</span>
             </div>
           </div>
 
