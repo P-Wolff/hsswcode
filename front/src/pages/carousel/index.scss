@@ -1,0 +1,98 @@
+.carousel-feedbacks {
+    .tittle2 h1{
+        margin-top: 60px;
+        font-size: 3rem;
+    }
+    .tittle2 {
+        font-size: 4rem;
+        text-align: left;
+        border-bottom: 5px solid #020E38;
+        display: inline-block;
+        margin-left: 33px;
+    }
+
+    .carousel {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        height: 400px;
+        overflow: hidden;
+        
+
+        & .card-container {
+            width: 500px; 
+            height: 350px;
+            transition: transform 0.5s, opacity 0.5s;
+            opacity: 0.5; 
+            transform-style: preserve-3d;
+        }
+    
+        & .card-container.active {
+            z-index: 10; 
+            opacity: 1; 
+            pointer-events: auto; 
+        }
+    
+        & .card-container:not(.active) {
+            pointer-events: none;
+            transform: scale(0.8) translateZ(-100px); 
+            z-index: 0;
+        }
+    
+        & .card {
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            text-align: left;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transform: rotateY(0);
+        }
+    
+        & .card-content {
+            display: flex; 
+            align-items: center;
+            margin-top: 2.5rem;
+        }
+        
+        & .card-image {
+            width: 70px;
+            height: auto; 
+            border-radius: 100%;
+        }
+        
+        & .text-content {
+            display: flex;
+            flex-direction: column; 
+            margin-left: 2.5rem;
+        }
+        & .titulo-carousel {
+            font-size: 2rem;
+        }
+        & .content-carousel {
+            font-size: 2rem;
+        }
+    
+        & .nav {
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+        }
+    
+        & .nav.left {
+            left: 10px;
+        }
+    
+        & .nav.right {
+            right: 10px;
+        }
+        
+    }
+
+}
