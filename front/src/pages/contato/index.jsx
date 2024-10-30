@@ -115,12 +115,12 @@ function Form({ isDropdownOpen, toggleDropdown, selectedOption, selectOption }) 
             },
             body: JSON.stringify(data),
         });
-        if (!response.ok) throw new Error('Network response was not ok');
+        if (!response.ok) throw new Error('Erro ao enviar a mensagem');
         alert('Mensagem enviada com sucesso!');
     } catch (error) {
         alert('Erro ao enviar a mensagem: ' + error.message);
     }
-  };
+};
 
 
 

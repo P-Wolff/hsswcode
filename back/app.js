@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
@@ -7,7 +8,8 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-require('dotenv').config();
+const PORT = process.env.PORT || 3001;
+
 const transporter = nodemailer.createTransport({
     service: 'Gmail', 
     auth: {
@@ -15,12 +17,13 @@ const transporter = nodemailer.createTransport({
         pass: process.env.GMAIL_PASS
     }
 });
+
 app.post('/send', (req, res) => {
     const { nome, email, telefone, empresa, cargo, mensagem } = req.body;
 
     const mailOptions = {
         from: email,
-        to: 'hsswcode@gmail.com', 
+        to: process.env.GMAIL_USER,
         subject: `New contact from ${nome}`,
         text: `
             Nome: ${nome}
