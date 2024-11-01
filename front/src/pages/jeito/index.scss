@@ -1,0 +1,149 @@
+.pagina-jeito {
+    text-align: center;
+    padding: 20px;
+    background-color: #0c0e23;
+    color: #ffffff;
+    position: relative;
+
+    .cards-container {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 20px;
+        position: relative;
+    }
+
+    .card {
+        width: 250px;
+        padding: 20px;
+        border-radius: 15px;
+        position: relative;
+        transition: transform 0.3s ease;
+        
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        .card-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .card-category {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #000;
+        }
+
+        .card-title {
+            font-size: 1.2em;
+            margin: 15px 0 10px;
+        }
+
+        .card-description {
+            font-size: 0.9em;
+            margin-bottom: 15px;
+            color: #fff;
+            text-align: left;
+        }
+
+        .card-button {
+            padding: 8px 16px;
+            background-color: #ffffff;
+            color: #030303;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+
+            &:hover {
+                background-color: #ececec;
+            }
+        }
+    }
+
+    .popup-overlay {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100vw;
+        height: 97vh;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        
+    }
+
+    .popup {
+        position: absolute;
+        top: 10%;
+        left: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+
+        .popup-content {
+            display: flex;
+            flex-direction: row;
+
+            text-align: left;
+            padding: 20px;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+            position: relative;
+            background: #0c0e23;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
+            .close-button {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                font-size: 1.5em;
+                cursor: pointer;
+                color: #333;
+    
+                &:hover {
+                    color: #f00;
+                }
+            }
+
+            .popup-info {
+                display: flex;
+                align-items: baseline;
+                flex-wrap: wrap;
+                text-align: left;
+
+                .popup-text {
+                    flex: 1;
+                    margin-right: 20px;
+
+                    h2 {
+                        color: #5372f0;
+                        font-size: 1.6em;
+                        margin-bottom: 10px;
+                    }
+
+                    p {
+                        color: #ffffff;
+                        font-size: 1.1em;
+                        line-height: 1.5;
+                    }
+                }
+
+                .popup-image {
+                    width: 100%;
+                    height: auto;
+                    border-radius: 10px;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
