@@ -3,7 +3,7 @@
 .comp-footer {
 
     .section__padding {
-        padding: 2vw 3vw;
+        padding: 1vw 4vw;
         margin: 0;
     }
     .footer {
@@ -29,47 +29,48 @@
         flex-direction: row;
         gap: 3vw;
         font-size: 1.5vw;
-        line-height: 1.5;
-        margin-bottom: 3rem;
+        line-height: 1;
+        margin-bottom: 2rem;
 
         .logo {
             width: 10vw;
         }
         .text__links-div {
-            font-size: 1.5vw;
+            font-size: 1.2vw;
         }
     }
 
 
 
     .sb__footer-links_div {
-        display: flex;
-        flex-direction: column;
         color: #fff;
         font-size: 1.2vw;
         margin-bottom: 3rem;
     
         h4 {
-            font-size: 1.8vw;
+            font-size: 1.4vw;
             margin-bottom: 0.5rem;
         }
     
         .foot__link-group {
             display: flex;
-            flex-direction: column;
-            width: 50%; // Distribui cada grupo em metade da largura
+            flex-wrap: wrap;
             gap: 0.5rem;
+            align-items: flex-start; 
+            justify-content: flex-start; 
         }
     
-        .foot__link-group + .foot__link-group {
-            margin-left: 2rem; // Espaçamento entre as duas colunas
+        .foot__link {
+            width: 45%;
+            text-align: left;  
+            margin-bottom: 0.5rem;
         }
     }
-
+    
     .button, .foot__link {
         background: transparent;
         color: #fff;
-        font-size: 1.5vw;
+        font-size: 1.2vw;
         line-height: 2.5;
         border: none;
         cursor: pointer;
@@ -180,35 +181,36 @@
 
 
     @media (max-width: 768px) {
+        
+        .sb__footer-links-div {
+            .logo {
+                width: 15vw;
+            }
+            .text__links-div {
+                font-size: 2vw;
+            }
+        }
+    
+        
         .sb__footer-links {
             flex-direction: column;
             align-items: center;
         }
 
         .sb_footer-below {
-            font-size: 1.4vw;
+            font-size: 2.5vw;
             flex-direction: column;
             align-items: center;
         }
 
-        .logo { width: 20vw; }
-        .sb__footer-links-div, .sb__footer-links_div { font-size: 2.5vw; }
-        .text__links-div, .button, .foot__link { font-size: 2vw; }
-    }
+        .logo { width: 50vw; }
+        .sb__footer-links-div, .sb__footer-links_div { font-size: 4vw; }
+        .text__links-div, .button, .foot__link { font-size: 2.5vw; }
 
-    @media (max-width: 480px) {
-        .section__padding { padding: 5vw 5vw; }
-
-        .sb__footer-links-div, .sb__footer-links_div {
-            text-align: center;
-            font-size: 3.5vw;
-            margin-bottom: 2rem;
+        .foot__link {
+            width: 100%;
         }
-
-        .logo { width: 30vw; }
-        .text__links-div, .button, .foot__link { font-size: 3vw; }
-
-        .sb_footer-below { font-size: 2vw; text-align: center; }
     }
+
 
 }

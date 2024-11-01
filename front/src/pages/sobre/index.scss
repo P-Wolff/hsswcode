@@ -142,6 +142,8 @@
             justify-content: space-between; 
             align-items: flex-start;
             width: 100%; 
+            flex-wrap: wrap;
+
         }
         
         & .text10, & .text11 {
@@ -229,13 +231,13 @@
 
     }
 
-
     .section__work {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
         height: 400px;
+        flex-wrap: wrap;
 
         .img_work {
             flex: 1;
@@ -306,5 +308,54 @@
 
     }
 
+
+    @media (max-width: 768px) {
+        .section__about_us {
+            flex-direction: column;
+            height: auto;
+        }
+        
+            .info_separar {
+                flex-direction: row;
+                align-items: center;
+            }
+        
+            .text10, .text11 {
+                width: 100%; 
+            }
+        }
+    
+        .section__MVV {
+            flex-direction: column;
+            height: auto;
+        
+            .missao, .visao, .valores {
+                margin-bottom: 20px;
+            }
+        }
+    
+        .section__work {
+            flex-direction: column;
+            height: auto;
+    
+            .text13 {
+                margin-left: 0;
+                text-align: center;
+            }
+        
+    
+            .titulo2 {
+            width: 100%;
+            text-align: center;
+            }
+        
+    
+            .text8 p, .text9, .titulo2 {
+                font-size: 2rem;
+                text-align: center;
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
 
 }

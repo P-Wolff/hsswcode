@@ -2,7 +2,7 @@
   background: #ffffff;
 
   .headline {
-    min-height: 450px;
+    min-height: 40px;
 
     & .estrela {
 
@@ -163,7 +163,7 @@
         border-bottom: none;
         color: #020E38;
         font-size: 2rem;
-        padding: 14px 83px;
+        padding: 14px 80px;
         cursor: pointer;
         transition: color 0.3s, background-color 0.3s;
  
@@ -175,7 +175,7 @@
           right: 0;
           bottom: 0;
           height: 1px;
-          background-color: #020E38; // linha de separação
+          background-color: #020E38; 
           transition: opacity 0.3s;
           opacity: 1;
           
@@ -206,7 +206,7 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: baseline;
-      width: 96%;
+      width: 90%;
 
       .info-content {
         max-width: 355px;
@@ -351,4 +351,56 @@
 
   }
 
+
+  @media (max-width: 768px) {
+    .headline {
+      min-height: 0;
+      #title {
+        font-size: 0px;
+      }
+    }
+  
+    .texto-entrada h3 {
+      font-size: 5rem;
+    }
+  
+    .texto-entrada p {
+      width: 100%;
+      font-size: 2rem;
+    }
+  
+    .tabs {
+      flex-direction: column;
+      button {
+        padding: 10px;
+        font-size: 1.5rem;
+      }
+    }
+  
+    .form-content {
+      flex-direction: column; 
+      align-items: center;   
+      margin: 0;              
+  
+      .info-content {
+        margin: 0 0 20px 0;
+        text-align: center;     
+      }
+  
+      .contatos-form {
+        width: 100%;  
+      }
+    }
+  
+    .contatos-form {
+      .form-group {
+        width: 100%; 
+      }
+  
+      .submit-button {
+        width: 100%; 
+      }
+    }
+  }
+  
 }

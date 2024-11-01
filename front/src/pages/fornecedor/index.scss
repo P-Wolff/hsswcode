@@ -1,5 +1,4 @@
 .fornecedor {
-    
     .container__sponsors {
         display: flex;
         flex-direction: column;
@@ -10,7 +9,7 @@
 
         & .group-nav {
             margin-bottom: 80px;
-        
+
             & ul {
                 font-size: 1.7rem;
                 list-style: none;
@@ -20,7 +19,7 @@
                 padding: 0;
                 width: 100%;
             }
-        
+
             & li {
                 cursor: pointer;
                 padding: 10px 20px;
@@ -29,12 +28,10 @@
                 transition: color 0.3s;
                 color: #000; 
             }
-        
 
             & li.active {
                 color: #020E38;
             }
-        
 
             & li.active::after {
                 content: '';
@@ -45,13 +42,11 @@
                 height: 3px;
                 background-color: #020E38; 
             }
-        
-        
+
             & li::after {
                 transition: all 0.3s ease-in-out;
             }
         }
-        
 
         & .sponsors {
             display: none;
@@ -65,7 +60,7 @@
                 justify-content: center;
                 flex-wrap: wrap; 
                 width: 100%; 
-            
+
                 & ul {
                     list-style: none;
                     padding: 0;
@@ -73,58 +68,42 @@
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: space-between;
-                    align-items: center;
-                    gap: 150px;
+                    align-items: flex-start; 
+                    gap: 100px; 
                     width: 100%;
-            
+
                     & li {
-                        flex: 1; 
-                        margin: 0; 
-                        max-width: calc(20% - 80px);
-            
+                        flex: 1 1 135px; 
+                        max-width: calc(25% - 20px); 
+
                         & img {
                             width: 100%; 
                             height: auto; 
                             display: block;
+                            max-width: 100%; 
                         }
                     }
                 }
             }
         }
 
-
-        @media (max-width: 1200px) {
-            & .cards ul li {
-                max-width: 25%;
-            }
-        }
-
         @media (max-width: 768px) {
             & .group-nav ul {
-                flex-direction: column;
-                gap: 20px;
+                flex-direction: row;
+                gap: 2px; 
 
                 & li {
-                    margin-bottom: 10px;
+                    margin-bottom: 20px;
+                    max-width: calc(25% - 50px); 
                 }
             }
 
             & .sponsors .cards ul li {
-                max-width: 33.33%; 
+                max-width: 15%; 
             }
-        }
 
-        @media (max-width: 480px) {
-            & .sponsors .cards ul li {
-                max-width: 50%; 
-            }
-        }
 
-        @media (max-width: 320px) {
-            & .sponsors .cards ul li {
-                max-width: 100%; 
-            }
-        }    
+
+        }
     }
-
 }

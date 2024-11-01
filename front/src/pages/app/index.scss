@@ -3,195 +3,6 @@
 
 .page-home{
 
-    .container {
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #00022f;
-        height: 140vh;
-        .slider :nth-child(1){
-            background-size: cover;
-            left:calc(-10.5% + 200px)
-        }
-        .slider .card:nth-child(2){
-            background-size: cover;
-            left:calc(-5.5% + 200px)
-        }
-        .slider .card:nth-child(3){
-            background-size: cover;
-            left:calc(4% + 240px)
-        }
-        .slider .card:nth-child(4){
-            background-size: cover;
-            left:calc(13.2% + 280px)
-        }
-        .slider .card:nth-child(5){
-            background-size: cover;
-            left:calc(24.8% + 240px)
-        }
-        .slider {
-          display: flex;
-          gap: 20px;
-          overflow-x: auto;
-          overflow: hidden;
-          
-          .card {
-            width: 300px;
-            background: #fff;
-            height: 50vh;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: last baseline;
-            .card-image {
-              width: 100%;
-              border-radius: 10px;
-            }
-            
-            .card-category {
-              font-size: 1.2em;
-              color: #5372f0;
-              margin: 10px 0;
-            }
-      
-            .card-description {
-              color: #666;
-              font-size: 0.9em;
-            }
-      
-            .card-button {
-              background: #5372f0;
-              color: white;
-              border: none;
-              border-radius: 5px;
-              padding: 8px 16px;
-              cursor: pointer;
-              margin-top: 15px;
-      
-              &:hover {
-                background: #4259c7;
-              }
-            
-            }
-          }
-        }
-      
-        .popup {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100vw;
-          height: 100vh;
-          background: rgba(0, 0, 0, 0.5);
-          display: flex;
-          justify-content: center;
-          align-items: center;
-      
-          .popup-content {
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            max-width: 600px;
-            width: 90%;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-      
-            .close-button {
-              position: absolute;
-              top: 10px;
-              right: 10px;
-              font-size: 1.5em;
-              cursor: pointer;
-      
-              &:hover {
-                color: #f00;
-              }
-            }
-      
-            .popup-info {
-              display: flex;
-              align-items: center;
-      
-              .popup-text {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                margin-right: 20px;
-      
-                h2 {
-                  color: #5372f0;
-                  margin-bottom: 10px;
-                }
-      
-                p {
-                  color: #333;
-                  font-size: 1em;
-                }
-              }
-      
-              .popup-image {
-                width: 150px;
-                height: auto;
-                border-radius: 10px;
-                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-              }
-            }
-          }
-        }
-        
-        .buttons{
-            position: absolute;
-            display:flex;
-            bottom: 15px;
-            gap: 20px;
-        }
-        .buttons {
-            position: relative;
-            width: 50px;
-            height: 50px;
-            cursor: pointer;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 25px;
-            background-color: #0f0e0e;
-        }
-        .buttons span::before{
-          content: '';  
-          position: absolute;
-          width: 15px;
-          height: 15px;
-          transform: rotate(315deg) translate(2px, 2px);
-          border-left: solid #fff;
-          border-top: solid #fff;
-        }
-        .buttons .direita::before{
-            content: '';  
-            position: absolute;
-            width: 15px;
-            height: 15px;
-            transform: rotate(495deg) translate(2px, 2px);
-            border-left: solid #fff;
-            border-top: solid #fff;
-          }
-          .buttons span :nth-child(2)::before{
-            transform: rotate(135deg)  translate(2px, 2px);
-        
-          }
-        
-          .buttons span:active{
-            opacity: 0.5;
-          }
-      }
-      
-      
- 
     .headline {
         width: 100%;
         height: 80vh;
@@ -342,7 +153,7 @@
         justify-content: center; 
         align-items: center;
         width: 100%;
-        height: 400px;
+        height: 700px;
         box-shadow: 0 0 10px rgba( 0, 0, 0, 0.1 );
 
         
@@ -370,7 +181,7 @@
         }
         
         & .text6 {
-            font-size: 4rem;
+            font-size: 3rem;
             text-align: left;
             border-bottom: 5px solid #020E38;
         }
@@ -406,7 +217,7 @@
             }
         
             &:hover .i {
-                transform: rotate(45deg); /* Rotaciona a seta para a diagonal */
+                transform: rotate(45deg); 
             }
         
             &:hover .button-link {
@@ -423,16 +234,17 @@
         }
 
         @media only screen and (max-width: 768px) {
-            flex-direction: column;
-            align-items: center;
-
-            & .text1, & .text2 {
-                padding: 10px;
-                width: 100%;
+            font-size: 1.5rem; 
+            padding: 8px 15px; 
+        
+            .button-link {
+                font-size: 1.2rem; 
+                padding: 8px 15px; 
             }
-
-            & .text1 p, & .text2 p {
-                font-size: 1rem;
+        
+            .i {
+                font-size: 1.2rem; 
+                margin-left: 5px;
             }
         }
 
@@ -444,7 +256,7 @@
         justify-content: space-around;
         text-align: start;
         width: 100%;
-        height: 400px;
+        height: 500px;
         padding: 30px;
         box-shadow: 0 0 10px rgba( 0, 0, 0, 0.1 );
 
@@ -502,8 +314,11 @@
 
 
         @media only screen and (max-width: 768px) {
-            flex-direction: column;
+            flex-direction: row;
             align-items: center;
+            font-size: 1.2rem; 
+            padding: 8px 15px; 
+            
 
             & .text3, & .text4 {
                 width: 100%;
@@ -512,10 +327,16 @@
             }
 
             & .button-link {
-                font-size: 0.9rem;
-                padding: 6px 12px;
-            }
+                    font-size: 1.2rem; 
+                    padding: 8px 15px; 
+                }
+            
+                .i {
+                    font-size: 1.2rem; 
+                    margin-left: 5px;
+                }
         }
+
     }
 
 
