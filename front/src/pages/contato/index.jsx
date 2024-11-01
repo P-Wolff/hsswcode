@@ -102,28 +102,6 @@ export default function Contatos() {
 
 function Form({ isDropdownOpen, toggleDropdown, selectedOption, selectOption }) {
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    const formData = new FormData(event.target);
-    const data = Object.fromEntries(formData.entries());
-
-    try {
-        const response = await fetch('http://localhost:3001/send', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data),
-        });
-        if (!response.ok) throw new Error('Erro ao enviar a mensagem');
-        alert('Mensagem enviada com sucesso!');
-    } catch (error) {
-        alert('Erro ao enviar a mensagem: ' + error.message);
-    }
-};
-
-
-
   return (
     <form className="contatos-form" onSubmit={handleSubmit}>
 
