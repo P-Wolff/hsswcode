@@ -4,6 +4,7 @@
     background-color: #0c0e23;
     color: #ffffff;
     position: relative;
+    height: 700px;
 
     .cards-container {
         display: flex;
@@ -15,7 +16,7 @@
     }
 
     .card {
-        width: 250px;
+        width: 280px;
         padding: 20px;
         border-radius: 15px;
         position: relative;
@@ -87,10 +88,9 @@
         justify-content: center;
         align-items: center;
         z-index: 1;
-
+        
         .popup-content {
             display: flex;
-            flex-direction: row;
 
             text-align: left;
             padding: 20px;
@@ -110,13 +110,14 @@
                 color: #333;
     
                 &:hover {
-                    color: #f00;
+                    color: #1100ff;
                 }
             }
 
             .popup-info {
                 display: flex;
                 align-items: baseline;
+                flex-direction: row;
                 flex-wrap: wrap;
                 text-align: left;
 

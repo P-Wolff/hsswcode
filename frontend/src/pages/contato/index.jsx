@@ -103,7 +103,7 @@ export default function Contatos() {
 function Form({ isDropdownOpen, toggleDropdown, selectedOption, selectOption }) {
 
   return (
-    <form className="contatos-form" onSubmit={handleSubmit}>
+    <form className="contatos-form" >
 
       <div className="form-group">
         <input type="text" id="nome" 

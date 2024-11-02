@@ -1,5 +1,5 @@
 import './index.scss';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 import digital from '../../assets/images/cards/digital.svg';
 import experience from '../../assets/images/cards/experience.svg';
