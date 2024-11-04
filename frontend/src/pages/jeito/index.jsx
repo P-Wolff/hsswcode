@@ -1,5 +1,7 @@
 import './index.scss';
-import { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
 
 import digital from '../../assets/images/cards/digital.svg';
 import experience from '../../assets/images/cards/experience.svg';
@@ -14,7 +16,6 @@ export default function JeitoNossoUnificado() {
     const dadosDosCards = [
         {
             titulo: 'Experience & Efficiency',
-            descricao: 'Ofertamos um conjunto de práticas de criação de valor e customer experience para empresas que buscam alavancar seus negócios com resultados e perpetuidade.',
             imagem: experience,
             popupTitle: 'Experience & Efficiency',
             popupDescription: `Oferecemos um conjunto de práticas de criação de valor e customer experience para empresas que buscam alavancar a eficiência e melhorar a gestão de seus negócios, maximizando resultados e gerando perpetuidade.
@@ -23,7 +24,6 @@ export default function JeitoNossoUnificado() {
         },
         {
             titulo: 'Strategy e M&A',
-            descricao: 'Usamos nossa expertise em diversas indústrias para apoiar clientes identificando oportunidades no mercado e definindo ações de crescimento.',
             imagem: strategy,
             popupTitle: 'Strategy e M&A',
             popupDescription: `Aumento da receita e rentabilidade da companhia, suportados por iniciativas estratégicas que aceleram o crescimento orgânico ou inorgânico.`,
@@ -31,7 +31,6 @@ export default function JeitoNossoUnificado() {
         },
         {
             titulo: 'Finance',
-            descricao: 'Aliamos nossa expertise aos CFOs e aos times de finanças oferecendo suporte à gestão orçamentária e otimizando rotinas financeiras.',
             imagem: finance,
             popupTitle: 'Finance',
             popupDescription: `Temos como objetivo alavancar a geração de valor das empresas, auxiliando CFOs e times de Finanças na evolução de seu nível de maturidade para que possam agir de forma mais estratégica.
@@ -42,7 +41,6 @@ export default function JeitoNossoUnificado() {
         },
         {
             titulo: 'Supply Chain',
-            descricao: 'Projetos completos desde o design, desdobramento de planos, distribuição até a implementação de tecnologias.',
             imagem: supply,
             popupTitle: 'Supply Chain',
             popupDescription: `Atuamos em todo o Supply Chain de diferentes setores abrangendo todos os elos da cadeia de abastecimento desde fornecedores, compras, planejamento, produção, armazenagem, transporte/abastecimento e customer fulfillment.
@@ -54,7 +52,6 @@ export default function JeitoNossoUnificado() {
         },
         {
             titulo: 'Technology',
-            descricao: 'Estruturação do core de tecnologia e do modelo operacional de TI para atender e direcionar as necessidades de negócio.',
             imagem: technology,
             popupTitle: 'Technology',
             popupDescription: `Enfrentar os desafios na área de tecnologia é uma tarefa complexa, especialmente quando existem problemas que podem estar afetando o desempenho e a eficiência da empresa. Os sistemas legados, infraestrutura obsoleta, problemas de integrações, dados inconsistentes e ataques cibernéticos são pontos de atenção que precisam ser endereçados.
@@ -64,7 +61,6 @@ export default function JeitoNossoUnificado() {
         },
         {
             titulo: 'Digital Transformation',
-            descricao: 'Transformação alavancando o sucesso do negócio na era digital através de uma experiência diferenciada aos clientes, processos eficientes e cultura colaborativa.',
             imagem: digital,
             popupTitle: 'Digital Transformation',
             popupDescription: 'Traçamos o caminho para a transformação digital definindo estratégia, maximizando o valor dos dados e acelerando a transformação com IA e produtos digitais.',
@@ -87,8 +83,20 @@ export default function JeitoNossoUnificado() {
     };
     
 
+    const section2Ref = useRef(null);
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.state?.sectionId) {
+            const scrollOptions = { behavior: "smooth", block: "start" };
+            if (location.state.sectionId === 'section2') {
+                section2Ref.current.scrollIntoView(scrollOptions);
+            }
+        }
+    }, [location]);
+
     return (
-        <div className="pagina-jeito">
+        <div className="pagina-jeito" ref={section2Ref} >
             <div className="cards-container">
                 {dadosDosCards.map((card, index) => (
                     <div

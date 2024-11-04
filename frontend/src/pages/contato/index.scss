@@ -204,13 +204,12 @@
     .form-content {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
       align-items: baseline;
-      width: 90%;
+      width: 98%;
 
       .info-content {
         max-width: 355px;
-        margin-right: 252px;
+        margin-right: 100px;
         margin-left: 80px;
 
         h2 {
