@@ -5,19 +5,17 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 12vh;
-    background: #020e38f6;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.199) ;
-    font-family: 'lato';
-    font-size: 2rem;
+    padding: 0 1rem;
+    height: 22vh;
+    background: #010f41f6;
+    font-size: 1.8rem;
   }
 
 
   .nav__menu{
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    gap: 9rem;
+    gap: 8rem;
 
   }
 
@@ -28,9 +26,7 @@
     margin: 0.4rem;
     transition: 0.4s ease-in;
     
-    background: rgb(13,13,13);
     background: linear-gradient(153deg, rgba(13,13,13,1) 0%, rgba(5,242,131,1) 0%, rgba(5,175,242,1) 100%);
-    box-shadow: 0 40px 60px rgba( 0, 0, 0, 0.1 );
   }
   .nav__toggler {
     cursor: pointer;
@@ -38,33 +34,9 @@
   }
 
 
-  @media screen and (max-width: 767px) {
-    .nav__menu{
-      position: absolute;
-    }
-
-    .nav__toggler {
-      display: block;
-    }
-
-    .nav__menu{
-      position: fixed;
-      flex-direction: column;
-      transform: translateX(100%);
-      top: 10vh;
-      right: 0;
-      width: 100%;
-      height: 93vh;
-      background: #020e38f6;
-      transition: 0.5s ease-in;
-    }
-  }
-
-
   .nav__active {
     transform: translateX(0);
   }
-
   .toggle .line1 {
     transform: rotate(-45deg) translate(-4px, 5px);
   }
@@ -75,25 +47,26 @@
     transform: rotate(45deg) translate(-4px, -5px);
   }
 
+  
+  #navbar {
+    font-size: 50rem;
 
+    > .no-scroll {
+      overflow: hidden;
+    }
+  }
   #navbar li .nav__link {
     transition: 0.3s ease-in-out;
   }
-
   #navbar li .nav__link:hover {
-    
-    background: rgb(13,13,13);
     background: linear-gradient(153deg, rgba(13,13,13,1) 0%, rgba(5,242,131,1) 0%, rgba(5,175,242,1) 100%) transparent;
     background-clip: text;
-    display: inline;
     color: transparent;
     animation: animated 4s linear infinite;
   }
-
   @keyframes animated {
     to {background-position-x: 161px;}
   }
-
   #navbar li :hover::after {
     content: "";
     width: 30%;
@@ -105,20 +78,67 @@
     border-bottom: solid 2px #0eecec;
   }
 
-  .button {
+
+  .button, li {
     background: transparent;
     color: #fff;
     border: none;
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
   
-  #navbar {
-    font-size: 2rem;
-
-    > .no-scroll {
-      overflow: hidden;
+  @media screen and (max-width: 700px) {
+    .nav {
+      height: 13vh;
     }
-  }
+    .nav__menu{
+      position: fixed;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 5rem;
+      top: 13vh;
+      right: 0;
+      width: 100%;
+      height: 87vh;
+      font-size: 1.8rem;
+      background: #040d2ef6;
+      transform: translateX(100%);
+      transition: 0.6s ease-in;
+    }
+    li {
+      margin-top: 50px;
+    }
+    
+    .nav__toggler {
+      display: block;
+      
+    }
+    .nav__active {
+      transform: translateX(0);
+    }
+    .toggle .line1 {
+      transform: rotate(-45deg) translate(-4px, 5px);
+    }
+    .toggle .line2 {
+      opacity: 0;
+    }
+    .toggle .line3 {
+      transform: rotate(45deg) translate(-4px, -5px);
+    }
 
+    .button, li {
+      font-size: 1.6rem;
+    }
+
+    #navbar {
+      font-size: 2rem;
+  
+      > .no-scroll {
+        overflow: hidden;
+      }
+    }
+
+
+  }
 
 }
