@@ -39,12 +39,8 @@ html{
     font-size: 62.5%;
 }
 
-body{
-    font-size: 1.6rem;
-}
-
 html, body {
-    overflow: auto;
+    overflow: hidden;
 }
 
 li{
@@ -61,8 +57,6 @@ h1, p {
     text-align: center;
     line-height: 1.4;
 }
-
-
 
 h2 {
     color: #000;

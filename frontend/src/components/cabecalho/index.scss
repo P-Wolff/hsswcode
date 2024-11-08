@@ -88,57 +88,40 @@
   
   @media screen and (max-width: 700px) {
     .nav {
-      height: 13vh;
+        height: 13vh;
     }
-    .nav__menu{
-      position: fixed;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      gap: 5rem;
-      top: 13vh;
-      right: 0;
-      width: 100%;
-      height: 87vh;
-      font-size: 1.8rem;
-      background: #040d2ef6;
-      transform: translateX(100%);
-      transition: 0.6s ease-in;
+
+    .nav__menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 5rem;
+        background: #040d2ef6;
+        transform: translateX(100%);
+        transition: transform 0.6s ease-in;
+        z-index: 9999;
     }
+
+    .nav__menu.nav__active {
+        transform: translateX(0); 
+    }
+
     li {
-      margin-top: 50px;
+        margin-top: 50px;
     }
-    
+
     .nav__toggler {
-      display: block;
-      
-    }
-    .nav__active {
-      transform: translateX(0);
-    }
-    .toggle .line1 {
-      transform: rotate(-45deg) translate(-4px, 5px);
-    }
-    .toggle .line2 {
-      opacity: 0;
-    }
-    .toggle .line3 {
-      transform: rotate(45deg) translate(-4px, -5px);
+        display: block;
     }
 
     .button, li {
-      font-size: 1.6rem;
+        font-size: 1.6rem;
     }
-
-    #navbar {
-      font-size: 2rem;
-  
-      > .no-scroll {
-        overflow: hidden;
-      }
-    }
-
-
-  }
+}
 
 }

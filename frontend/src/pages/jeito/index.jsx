@@ -97,6 +97,8 @@ export default function JeitoNossoUnificado() {
 
     return (
         <div className="pagina-jeito" ref={section2Ref} >
+            <h2>Nossas soluções são construidas lado a lado</h2>
+            
             <div className="cards-container">
                 {dadosDosCards.map((card, index) => (
                     <div
@@ -153,7 +155,7 @@ function Popup({ title, description, imageUrl, onClose, position }) {
                     <span className="close-button" onClick={onClose}>&times;</span>
                     <div className="popup-info">
                         <div className="popup-text">
-                            <h2>{title}</h2>
+                            <h2 className='colorido'>{title}</h2>
                             <p>{description}</p>
                         </div>
                         <img src={imageUrl} alt={title} className="popup-image" />

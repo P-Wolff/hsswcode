@@ -3,7 +3,7 @@
         margin-top: 60px;
         font-size: 3rem;
 
-        @media only screen and (max-width: 768px) {
+        @media only screen and (max-width: 700x) {
             font-size: 3rem;
         }
     }
@@ -15,7 +15,7 @@
         display: inline-block;
         margin-left: 33px;
 
-        @media only screen and (max-width: 768px) {
+        @media only screen and (max-width: 700px) {
             font-size: 2.5rem;
             margin-left: 20px;
         }
@@ -26,25 +26,23 @@
         align-items: center;
         justify-content: center;
         position: relative;
-        height: 400px;
+        height: 50vh;
         overflow: hidden;
         cursor: pointer;
 
-        @media only screen and (max-width: 768px) {
+        @media only screen and (max-width: 700px) {
             flex-direction: column;
-            height: auto;
         }
 
         & .card-container {
             width: 500px; 
-            height: 350px;
+            height: 30vh;
             cursor: pointer;
             transition: transform 0.3s, opacity 0.3s;   
             opacity: 0.5; 
 
-            @media only screen and (max-width: 768px) {
+            @media only screen and (max-width: 700px) {
                 width: 100%;
-                height: auto;
             }
         }
         & .card-container.hidden {
@@ -73,7 +71,7 @@
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             transform: rotateY(0);
 
-            @media only screen and (max-width: 768px) {
+            @media only screen and (max-width: 700px) {
                 padding: 3rem;
             }
         }
@@ -83,9 +81,10 @@
             align-items: center;
             margin-top: 2.5rem;
 
-            @media only screen and (max-width: 768px) {
+            @media only screen and (max-width: 700px) {
                 flex-direction: column;
-                margin-top: 2.5rem;
+                margin-top: 2.9rem;
+                margin-top: 3rem;
             }
         }
 
@@ -94,7 +93,7 @@
             height: auto; 
             border-radius: 100%;
 
-            @media only screen and (max-width: 768px) {
+            @media only screen and (max-width: 700px) {
                 width: 70px;
             }
         }
@@ -104,7 +103,7 @@
             flex-direction: column; 
             margin-left: 2.5rem;
 
-            @media only screen and (max-width: 768px) {
+            @media only screen and (max-width: 700px) {
                 margin-left: 0;
                 text-align: center;
             }
@@ -113,16 +112,16 @@
         & .titulo-carousel {
             font-size: 2rem;
 
-            @media only screen and (max-width: 768px) {
-                font-size: 2.5rem;
+            @media only screen and (max-width: 700px) {
+                font-size: 2.7vw;
             }
         }
 
         & .content-carousel {
             font-size: 2rem;
 
-            @media only screen and (max-width: 768px) {
-                font-size: 2.5rem;
+            @media only screen and (max-width: 700px) {
+                font-size: 3.2vw;
             }
         }
 

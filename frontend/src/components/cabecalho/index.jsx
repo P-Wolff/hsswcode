@@ -23,18 +23,20 @@ export default function Navbar() {
 
         setActive("nav__menu");
         setTogglerIcon("nav__toggler");
-        document.body.classList.remove("no-scroll"); 
         navigate(path, { state: { sectionId } });
     };
 
 
     useEffect(() => {
         if (active.includes("nav__active")) {
-            document.body.classList.add("no-scroll");
+            document.body.style.overflow = "hidden"; 
         } else {
-            document.body.classList.remove("no-scroll");
+            document.body.style.overflow = "auto"; 
         }
-    }, [active]);
+        return () => {
+            document.body.style.overflow = "auto";
+        };
+    }, [active]);;
 
     return (
         <div className="comp-header pagina">

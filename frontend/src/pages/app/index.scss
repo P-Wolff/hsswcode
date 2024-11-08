@@ -3,11 +3,13 @@
 
 .page-home{
 
+    
+
     .headline {
         width: 100%;
         height: 80vh;
         min-height: 450px;
-        background: radial-gradient(ellipse at bottom, #1B2735 0%, #020E38 100%);
+        background: radial-gradient(ellipse at bottom, #dae1e9 0%, #9babe2 100%);
         height: 90vh;
         min-height: 605px;
         background: url(../../assets/images/land-page/containerheader.svg) no-repeat center center;
@@ -27,7 +29,7 @@
             font-size: 2.2rem;
         }
 
-        @media only screen and (max-width: 720px) {
+        @media only screen and (max-width: 700px) {
             h1 {
                 font-size: 1.5rem;
             }
@@ -127,8 +129,8 @@
 
                 }
 
-                @media only screen and (max-width: 600px) {
-                    font-size: 1.5rem;
+                @media only screen and (max-width: 700px) {
+                    font-size: 5.5vw;
                     top: 35%;
                 }
 
@@ -154,7 +156,6 @@
         align-items: center;
         width: 100%;
         height: 700px;
-        box-shadow: 0 0 10px rgba( 0, 0, 0, 0.1 );
 
         
         & .text1, & .text2 {
@@ -233,10 +234,32 @@
             }
         }
 
-        @media only screen and (max-width: 768px) {
-            font-size: 1.5rem; 
-            padding: 8px 15px; 
+        @media only screen and (max-width: 700px) {
+            flex-direction: column;
+            margin: 15px;
+
+            & .text1, & .text2 {
+                flex: 0;
+                padding: 5px;
+                margin-bottom: 0px;
+            }
         
+            & .text1 p {
+                margin-top: 10px;
+                font-size: 3.5vw;
+            }
+        
+            & .text2 p {
+                margin-top: 80px;
+                font-size: 3.3vw;
+            }
+            
+            & .text6 {
+                font-size: 5vw;
+                text-align: left;
+            }
+        
+
             .button-link {
                 font-size: 1.2rem; 
                 padding: 8px 15px; 
@@ -313,20 +336,27 @@
         }
 
 
-        @media only screen and (max-width: 768px) {
-            flex-direction: row;
-            align-items: center;
-            font-size: 1.2rem; 
-            padding: 8px 15px; 
-            
+        @media only screen and (max-width: 700px) {
+            flex-direction: column;
 
-            & .text3, & .text4 {
+            
+            .text3, .text4 {
                 width: 100%;
                 text-align: center;
-                padding: 10px;
+                padding: 0px;
+                margin: 0px 0px 0px 0px;
+                min-height: 50%; 
+
             }
 
-            & .button-link {
+            .text3 {
+                font-size: 4vw;
+            }
+            .text4 {
+                font-size: 4vw;
+            }
+
+            .button-link {
                     font-size: 1.2rem; 
                     padding: 8px 15px; 
                 }
