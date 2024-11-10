@@ -4,11 +4,11 @@
     background-color: #0c0e23;
     color: #ffffff;
     position: relative;
-    height: 700px;
+    height: 900px;
 
     h2 {
         color: #fff;
-        font-size: 3rem;
+        font-size: 5rem;
         text-align: left;
         font-weight: lighter;
         width: 30%;
@@ -20,17 +20,16 @@
         gap: 20px;
         justify-content: center;
         flex-wrap: wrap;
-        padding: 20px;
+        padding: 80px;
         position: relative;
     }
 
     .card {
-        width: 280px;
-        padding: 20px;
+        width: 290px;
+        padding: 10px;
         border-radius: 15px;
         position: relative;
         transition: transform 0.3s ease;
-        
 
         &:hover {
             transform: scale(1.05);
@@ -49,20 +48,22 @@
         }
 
         .card-title {
-            font-size: 1.2em;
-            margin: 15px 0 10px;
+            font-size: 3.5em;
+            margin: 40px 0 60px;
             background-clip: text;
             color: transparent;
+
         }
 
         .card-button {
-            padding: 8px 16px;
+            padding: 12px 19px;
             background-color: #ffffff;
             color: #030303;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             font-weight: bold;
+            
 
             &:hover {
                 background-color: #ececec;
