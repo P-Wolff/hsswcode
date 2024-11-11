@@ -10,6 +10,10 @@ import imgslide5 from '../../assets/images/feedbacks/Miranda.svg';
 
 export default function Carousel() {
     const [active, setActive] = useState(0);
+    const [isTransitioning, setIsTransitioning] = useState(false);
+    const [isRunning, setIsRunning] = useState(window.innerWidth <= 700); 
+    const [count, setCount] = useState(0); 
+
     const cards = [
         {
             imageUrl: imgslide1,
@@ -50,8 +54,36 @@ export default function Carousel() {
         }
     }, [location]);
 
+    useEffect(() => {
+        let interval;
+
+        if (isRunning) {
+            
+            interval = setInterval(() => {
+                handleNextCard();
+            }, 8000);
+        } else {
+            
+            clearInterval(interval);
+        }
+
+        return () => clearInterval(interval);
+    }, [isRunning]);
+
     const handleNextCard = () => {
+        if (isTransitioning) return;
+
+        setIsTransitioning(true);
         setActive((prevActive) => (prevActive + 1) % cards.length);
+        console.log(active);
+    };
+
+    const handleIndicatorClick = (index) => {
+        if (isTransitioning || active === index) return;
+
+        setIsTransitioning(true);
+        setActive(index);
+        
     };
 
     return (
@@ -60,17 +92,26 @@ export default function Carousel() {
                 <h1>FeedBacks</h1>
             </div>
 
-            <div className="carousel" onClick={handleNextCard}> 
-                {cards.map((card, i) => (
-                    <div
-                        key={i}
-                        className={`card-container ${active === i ? 'active' : 'hidden'}`} 
-                    >
-                        {active === i && ( 
-                            <Card title={card.title} content={card.content} imageUrl={card.imageUrl} />
-                        )}
-                    </div>
-                ))}
+            <div className="carousel" onClick={handleNextCard}>
+                <div className="card-container">
+                    {cards.map((card, i) => (
+                        <div key={i} className={`card ${active === i ? 'active' : 'hidden'}`}>
+                            {active === i && (
+                                <Card title={card.title} content={card.content} imageUrl={card.imageUrl} />
+                            )}
+                        </div>
+                    ))}
+                </div>
+                
+                <div className="carousel-indicators">
+                    {cards.map((_, index) => (
+                        <span
+                            key={index}
+                            className={`indicator ${active === index ? 'active' : ''}`}
+                            onClick={() => handleIndicatorClick(index)}
+                        />
+                    ))}
+                </div>
             </div>
         </div>
     );
@@ -78,9 +119,9 @@ export default function Carousel() {
 
 function Card({ title, content, imageUrl }) {
     return (
-        <div className="card">
+        <div className="card-content">
             <p className="content-carousel">{content}</p>
-            <div className="card-content">
+            <div className="card-details">
                 <img src={imageUrl} alt={title} className="card-image" />
                 <div className="text-content">
                     <h3 className="titulo-carousel">{title}</h3>

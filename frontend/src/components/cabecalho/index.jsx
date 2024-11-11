@@ -4,12 +4,12 @@ import { useState, useEffect } from 'react';
 import Logo from '../../assets/images/land-page/logo.svg';
 
 export default function Navbar() {
-    const [active, setActive] = useState("nav__menu");
+    const [active, setActive] = useState("nav__inactive");
     const [toggleIcon, setTogglerIcon] = useState("nav__toggler");
 
     const navToggle = () => {
         setActive((prevActive) => 
-            prevActive === "nav__menu" ? "nav__menu nav__active" : "nav__menu"
+            prevActive === "nav__inactive" ? "nav__active" : "nav__inactive"
         );
 
         setTogglerIcon((prevIcon) => 
@@ -21,7 +21,7 @@ export default function Navbar() {
 
     const handleNavigation = (path, sectionId) => {
 
-        setActive("nav__menu");
+        setActive("nav__inactive");
         setTogglerIcon("nav__toggler");
         navigate(path, { state: { sectionId } });
     };

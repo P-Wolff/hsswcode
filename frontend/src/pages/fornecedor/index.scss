@@ -88,19 +88,21 @@
         }
 
         @media (max-width: 768px) {
-            & .group-nav ul {
+            .group-nav ul {
                 flex-direction: row;
-                gap: 2px; 
+                flex-wrap: wrap;
+                gap: 40px; 
 
                 & li {
                     margin-bottom: 20px;
-                    max-width: calc(25% - 50px); 
+                    max-width: calc(25% - 10px); 
                 }
             }
 
-            & .sponsors .cards ul li {
-                max-width: 15%; 
+            .sponsors .cards ul li {
+                max-width: 20%; 
             }
+
 
 
 

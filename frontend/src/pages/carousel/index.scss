@@ -1,13 +1,4 @@
 .carousel-feedbacks {
-    .tittle2 h1 {
-        margin-top: 60px;
-        font-size: 3rem;
-
-        @media only screen and (max-width: 700x) {
-            font-size: 3rem;
-        }
-    }
-
     .tittle2 {
         font-size: 4rem;
         text-align: center;
@@ -15,9 +6,9 @@
         display: inline-block;
         margin-left: 33px;
 
-        @media only screen and (max-width: 700px) {
-            font-size: 2.5rem;
-            margin-left: 20px;
+        & h1 {
+            margin-top: 60px;
+            font-size: 3rem;
         }
     }
 
@@ -29,102 +20,139 @@
         height: 50vh;
         overflow: hidden;
         cursor: pointer;
-
-        @media only screen and (max-width: 700px) {
-            flex-direction: column;
-        }
-
-        & .card-container {
-            width: 500px; 
-            height: 30vh;
-            cursor: pointer;
-            transition: transform 0.3s, opacity 0.3s;   
-            opacity: 0.5; 
-
-            @media only screen and (max-width: 700px) {
-                width: 100%;
-            }
-        }
-        & .card-container.hidden {
-            display: none;
-        }
-
-        & .card-container.active {
-            display: block;
-            opacity: 1;
-            transition: opacity 0.5s ease-in-out;
         
+        & .card {
+            width: 500px;
+            height: 100%;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            pointer-events: none;
         }
 
-        & .card-container:not(.active) {
+        & .card.active {
+            opacity: 1;
+            display: block;
+            transform: scale(1);  
+        }
+        & .card:not(.active) {
             pointer-events: none;
             transform: scale(0.8) translateZ(-100px); 
             z-index: 0;
         }
 
-        & .card {
-            width: 100%;
-            height: 100%;
-            background-color: #fff;
-            text-align: left;
-            padding: 1.5rem;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            transform: rotateY(0);
-
-            @media only screen and (max-width: 700px) {
-                padding: 3rem;
-            }
+        & .card-container {
+            width: 500px; 
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.3s, opacity 0.3s;   
         }
-
-        & .card-content {
-            display: flex; 
-            align-items: center;
-            margin-top: 2.5rem;
-
-            @media only screen and (max-width: 700px) {
-                flex-direction: column;
-                margin-top: 2.9rem;
-                margin-top: 3rem;
-            }
+        & .card-container.hidden {
+            display: none;
         }
+ 
 
         & .card-image {
             width: 70px;
             height: auto; 
             border-radius: 100%;
-
-            @media only screen and (max-width: 700px) {
-                width: 70px;
-            }
+            margin-top: 20px;
         }
 
         & .text-content {
             display: flex;
             flex-direction: column; 
-            margin-left: 2.5rem;
-
-            @media only screen and (max-width: 700px) {
-                margin-left: 0;
-                text-align: center;
-            }
+            margin-left: 1rem;
+            
         }
 
         & .titulo-carousel {
             font-size: 2rem;
-
-            @media only screen and (max-width: 700px) {
-                font-size: 2.7vw;
-            }
         }
 
         & .content-carousel {
             font-size: 2rem;
 
-            @media only screen and (max-width: 700px) {
-                font-size: 3.2vw;
-            }
         }
 
-        
+        & .carousel-indicators {
+            position: absolute;
+            bottom: 10px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        & .indicator {
+            width: 10px;
+            height: 10px;
+            margin: 0 5px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        & .indicator.active {
+            background-color: #020E38;
+        }
     }
+
+    @media screen and (max-width: 700px) {
+        .carousel {
+            flex-direction: row;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .card-container {
+            display: flex;
+            flex-direction: row;
+            animation: scroll-cards 20s linear infinite; 
+        }
+
+        .card {
+            padding: 2rem;
+            flex-shrink: 0;
+            text-align: center;
+            margin-right: 2rem;
+        }
+
+        .card-content {
+            flex-direction: column;
+            margin-top: 2.9rem;
+            margin-top: 3rem;
+        }
+
+        .card-image {
+            width: 70px;
+            border-radius: 60%;
+        }
+
+        .text-content {
+            margin-left: 0;
+            text-align: center;
+        }
+
+        .titulo-carousel {
+            font-size: 2.7vw;
+        }
+
+        .content-carousel {
+            font-size: 3.2vw;
+        }
+
+        @keyframes scroll-cards {
+            0% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(-200%);
+            }
+        }
+    }
+    
 }

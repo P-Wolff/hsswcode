@@ -222,7 +222,6 @@
             }
         
             &:hover .button-link {
-                background-color: rgb(13, 13, 13);
                 background: linear-gradient(153deg, rgba(13,13,13,1) 0%, rgba(5,242,131,1) 0%, rgba(5,175,242,1) 100%);
                 background-clip: text;
                 color: transparent;
@@ -236,43 +235,52 @@
 
         @media only screen and (max-width: 700px) {
             flex-direction: column;
-            margin: 15px;
+            margin: 40px 0px 0px 30px ;
+            width: 80%;
+            height: 650px;
 
-            & .text1, & .text2 {
+            .text1, .text2 {
                 flex: 0;
                 padding: 5px;
                 margin-bottom: 0px;
             }
         
-            & .text1 p {
-                margin-top: 10px;
+            .text1 p {
+                margin-top: 40px;
                 font-size: 3.5vw;
             }
         
-            & .text2 p {
-                margin-top: 80px;
+            .text2 p {
+                margin-top: 100px;
                 font-size: 3.3vw;
             }
             
-            & .text6 {
+            .text6 {
                 font-size: 5vw;
                 text-align: left;
             }
-        
 
-            .button-link {
-                font-size: 1.2rem; 
-                padding: 8px 15px; 
-            }
+            .more__about {
+                margin-top: 15px;
+                
         
-            .i {
-                font-size: 1.2rem; 
-                margin-left: 5px;
+                .button-link {
+                    color: #020E38;
+                    background-color: transparent;
+                    font-size: 2rem; 
+                    padding: 8px 15px;
+                    text-align: left;
+                }
+            
+                .i {
+                    font-size: 1.2rem; 
+                    margin-left: 5px;
+                    text-align: left;
+                }
             }
         }
-
     }
-    
+
 
     .section__contato {
         display: flex;
@@ -331,7 +339,6 @@
         .button-link:focus, 
         .button-link:hover {
             color: #fff;
-            background: rgb(13, 13, 13);
             background: linear-gradient(153deg, rgba(13, 13, 13, 1) 0%, rgba(5, 242, 131, 1) 0%, rgba(5, 175, 242, 1) 100%) transparent;
         }
 
@@ -345,7 +352,7 @@
                 text-align: center;
                 padding: 0px;
                 margin: 0px 0px 0px 0px;
-                min-height: 50%; 
+                min-height: 50px; 
 
             }
 
@@ -357,7 +364,7 @@
             }
 
             .button-link {
-                    font-size: 1.2rem; 
+                    font-size: 2rem; 
                     padding: 8px 15px; 
                 }
             
