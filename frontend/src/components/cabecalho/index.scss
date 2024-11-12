@@ -34,7 +34,10 @@
     transform: translateX(0);
   }
   .nav__inactive {
-    display: none;
+    display: flex;
+    align-items: center;
+    gap: 8rem;
+    transform: translateX(0);
   }
   .toggle .line1 {
     transform: rotate(-45deg) translate(-4px, 5px);
@@ -89,6 +92,9 @@
     
     .nav {
         height: 13vh;
+    }
+    .nav__inactive {
+      display: none;
     }
 
     .nav__active {

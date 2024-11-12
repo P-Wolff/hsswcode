@@ -13,146 +13,64 @@
     }
 
     .carousel {
+        overflow: hidden;
+        width: 100%;
+        position: relative;
+    }
+
+    
+    .card-container {
         display: flex;
+        gap: 20px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        animation: slide 40s linear infinite;
+        width: calc(100px * 5);
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        position: relative;
-        height: 50vh;
-        overflow: hidden;
-        cursor: pointer;
-        
-        & .card {
-            width: 500px;
-            height: 100%;
-            transition: opacity 0.5s ease, transform 0.5s ease;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        & .card.active {
-            opacity: 1;
-            display: block;
-            transform: scale(1);  
-        }
-        & .card:not(.active) {
-            pointer-events: none;
-            transform: scale(0.8) translateZ(-100px); 
-            z-index: 0;
-        }
-
-        & .card-container {
-            width: 500px; 
-            height: auto;
-            cursor: pointer;
-            transition: transform 0.3s, opacity 0.3s;   
-        }
-        & .card-container.hidden {
-            display: none;
-        }
- 
-
-        & .card-image {
-            width: 70px;
-            height: auto; 
-            border-radius: 100%;
-            margin-top: 20px;
-        }
-
-        & .text-content {
-            display: flex;
-            flex-direction: column; 
-            margin-left: 1rem;
-            
-        }
-
-        & .titulo-carousel {
-            font-size: 2rem;
-        }
-
-        & .content-carousel {
-            font-size: 2rem;
-
-        }
-
-        & .carousel-indicators {
-            position: absolute;
-            bottom: 10px;
-            display: flex;
-            justify-content: center;
-            width: 100%;
-        }
-
-        & .indicator {
-            width: 10px;
-            height: 10px;
-            margin: 0 5px;
-            border-radius: 50%;
-            background-color: rgba(0, 0, 0, 0.5);
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        & .indicator.active {
-            background-color: #020E38;
-        }
+        padding: 45px;
+        width: 500px; 
+        height: 100%;
+        flex-shrink: 0;
     }
 
-    @media screen and (max-width: 700px) {
-        .carousel {
-            flex-direction: row;
-            overflow: hidden;
-            position: relative;
-        }
+    .card-image {
+        width: 70px;
+        height: auto;
+        border-radius: 100%;
+        margin-top: 20px;
+    }
 
-        .card-container {
-            display: flex;
-            flex-direction: row;
-            animation: scroll-cards 20s linear infinite; 
-        }
+    .titulo-carousel {
+        font-size: 2rem;
+    }
 
-        .card {
-            padding: 2rem;
-            flex-shrink: 0;
-            text-align: center;
-            margin-right: 2rem;
-        }
+    .content-carousel {
+        font-size: 2rem;
+    }
 
-        .card-content {
-            flex-direction: column;
-            margin-top: 2.9rem;
-            margin-top: 3rem;
+    @keyframes slide {
+        0% {
+            transform: translateX(0);
         }
-
-        .card-image {
-            width: 70px;
-            border-radius: 60%;
+        20% {
+            transform: translateX(-100%);
         }
-
-        .text-content {
-            margin-left: 0;
-            text-align: center;
+        40% {
+            transform: translateX(-200%);
         }
-
-        .titulo-carousel {
-            font-size: 2.7vw;
+        60% {
+            transform: translateX(-300%);
         }
-
-        .content-carousel {
-            font-size: 3.2vw;
+        80% {
+            transform: translateX(-400%);
         }
-
-        @keyframes scroll-cards {
-            0% {
-                transform: translateX(0);
-            }
-            50% {
-                transform: translateX(-100%);
-            }
-            100% {
-                transform: translateX(-200%);
-            }
+        100% {
+            transform: translateX(0);
         }
     }
-    
 }
