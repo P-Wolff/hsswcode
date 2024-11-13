@@ -19,9 +19,9 @@ export default function Footer () {
                 <div className="sb__footer section__padding">
                     <div className="sb__footer-links">
 
+                        
                         <div className="sb__footer-links-div">
                             <img src={Logo} alt='HSSW Code' title='HSSW Code' className='logo' />
-
                             <h4 className='text__links-div' > Pessoas e empresas que se 
                                 <br /> realizam nunca mais 
                                 <br />são as mesmas
@@ -30,33 +30,29 @@ export default function Footer () {
                                 </h4>
                         </div>
                         
-                        <div className='separarResp'> 
-                            <div className="sb__footer-links_div">
-                                <h4 className='button1'> Explore </h4>
-                                <div className="foot__link-group">
-                                    <button className="foot__link button" onClick={() => handleNavigation("/", "section1")}>Jeito da HSSW</button>
-                                    <button className="foot__link button" onClick={() => handleNavigation("/", "section2")}>Como fazemos</button>
-                                    <Link className="foot__link button" href="/sobre">Sobre nós</Link>
-                                </div>
-                                <div className="foot__link-group">
-                                    <button className="foot__link button" onClick={() => handleNavigation("/", "section4")}>FeedBacks</button>
-                                    <Link className="foot__link button" href="/contato">Contato</Link>
-                                </div>
+                        <div className="sb__footer-links_div">
+                            <h4 className='button1'> Explore </h4>
+                            <div className="foot__link-group">
+                                <button className="foot__link button" onClick={() => handleNavigation("/", "section1")}>Jeito da HSSW</button>
+                                <button className="foot__link button" onClick={() => handleNavigation("/", "section2")}>Como fazemos</button>
+                                <Link className="foot__link button" href="/sobre">Sobre nós</Link>
                             </div>
-
-
-                            <div className="sb__footer-links_div">
-                                <h4 className='textG'>Em breve</h4>
-                                <div className="social-icons">
-                                    <p className='iconeG'><Link className="facebook" to="#"><img className='icone' src="../../assets/images/icones/bxl-facebook.svg" alt="facebook" /></Link></p>
-                                    <p className='iconeG'><Link className="twitter" to="#"><img className='icone' src="../../assets/images/icones/bxl-twitter.svg" alt="twitter" /></Link></p>
-                                    <p className='iconeG'><Link className="instagram" to="#"><img className='icone' src="../../assets/images/icones/bxl-instagram.svg" alt="instagram" /></Link></p>
-                                    <p className='iconeG'><Link className="linkedin" to="#"><img className='icone'  src="../../assets/images/icones/bxl-linkedin-square.svg" alt="linkedin" /></Link></p>
-                                </div>
+                            <div className="foot__link-group">
+                                <button className="foot__link button" onClick={() => handleNavigation("/", "section4")}>FeedBacks</button>
+                                <Link className="foot__link button" href="/contato">Contato</Link>
                             </div>
-                            
                         </div>
 
+                        <div className="sb__footer-links_div">
+                            <h4 className='textG'>Em breve</h4>
+                            <div className="social-icons">
+                                <p className='iconeG'><Link className="facebook" to="#"><img className='icone' src="../../assets/images/icones/bxl-facebook.svg" alt="facebook" /></Link></p>
+                                <p className='iconeG'><Link className="twitter" to="#"><img className='icone' src="../../assets/images/icones/bxl-twitter.svg" alt="twitter" /></Link></p>
+                                <p className='iconeG'><Link className="instagram" to="#"><img className='icone' src="../../assets/images/icones/bxl-instagram.svg" alt="instagram" /></Link></p>
+                                <p className='iconeG'><Link className="linkedin" to="#"><img className='icone'  src="../../assets/images/icones/bxl-linkedin-square.svg" alt="linkedin" /></Link></p>
+                            </div>
+                        </div>
+                        
                     </div>
 
                         <div className="grad-bar"></div>

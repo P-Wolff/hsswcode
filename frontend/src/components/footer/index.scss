@@ -1,9 +1,10 @@
 
 
 .comp-footer {
+    
 
     .section__padding {
-        padding: 1vw 4vw;
+        padding: 1vw 3vw;
         margin: 0;
     }
     .footer {
@@ -17,50 +18,48 @@
     .sb__footer-links {
         display: flex;
         justify-content: space-between;
-        align-items: flex-start;
         flex-wrap: wrap;
         text-align: left;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
     }
 
     .sb__footer-links-div {
         color: #e4e2e2;
         display: flex;
         flex-direction: row;
-        gap: 3vw;
+        gap: 3.5vw;
         font-size: 1.5vw;
         line-height: 1;
         margin-bottom: 2rem;
 
-        .logo {
+        & .logo {
             width: 10vw;
+            z-index: 1;
         }
-        .text__links-div {
+        & .text__links-div {
             font-size: 1.2vw;
         }
     }
 
 
-
     .sb__footer-links_div {
         color: #fff;
         font-size: 1.2vw;
-        margin-bottom: 3rem;
     
-        h4 {
+        & h4 {
             font-size: 1.4vw;
             margin-bottom: 0.5rem;
         }
     
-        .foot__link-group {
+        & .foot__link-group {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
-            align-items: flex-start; 
+            align-items: baseline; 
             justify-content: flex-start; 
         }
     
-        .foot__link {
+        & .foot__link {
             width: 45%;
             text-align: left;  
             margin-bottom: 0.5rem;
@@ -94,9 +93,12 @@
 
     .social-icons {
         display: flex;
-        gap: 1vw;
+        width: 50%;
+        gap: 1.5vw;
+        margin-top: 75px;
+        margin-right: 8px;
 
-        a {
+        & a {
             width: 3vw;
             height: 3vw;
             display: flex;
@@ -107,15 +109,15 @@
             transition: all 0.2s;
         }
 
-        a:hover {
+        & a:hover {
             color: #fff;
             background-color: #06003d;
         }
 
-        .facebook:hover { background-color: #3b5998; }
-        .twitter:hover { background-color: #1077ff; }
-        .linkedin:hover { background-color: #007bb6; }
-        .instagram:hover { background-color: #ef3dff; }
+        & .facebook:hover { background-color: #3b5998; }
+        & .twitter:hover { background-color: #1077ff; }
+        & .linkedin:hover { background-color: #007bb6; }
+        & .instagram:hover { background-color: #ef3dff; }
     }
 
 
@@ -149,7 +151,7 @@
         align-items: baseline;
         flex-wrap: wrap;
         font-size: 1vw;
-        gap: 1rem;
+        gap: 6rem;
     }
     .sb__footer-copyright p {
         color: #fff;
@@ -160,7 +162,7 @@
 
     .foot__links {
         line-height: 40px;
-        font-size: 1.7rem;
+        font-size: 2rem;
         display: inline-block;
     }
     .foot__links:active, 
@@ -180,34 +182,54 @@
 
 
 
-    @media (max-width: 700px) {
+    @media (max-width: 768px) {
         
         .sb__footer-links-div {
             .logo {
-                width: 18vw;
+                width: 12vw;
             }
             .text__links-div {
-                font-size: 2.5vw;
+                font-size: 2vw;
             }
         }
     
         
         .sb__footer-links {
-            flex-direction: column;
+            flex-direction: row;
             align-items: center;
 
             .button {
-                font-size: 3vw;
+                font-size: 2vw;
             }
             .button1{
-                font-size: 3.5vw;
+                font-size: 2vw;
+            }
+
+            .sb__footer-links_div{
+                display: block;
+
+                .social-icons {
+                    margin-top: 15px;
+                    margin-bottom: 15px;
+                }
             }
         }
 
-        .sb_footer-below {
-            font-size: 2.2vw;
+        .sb_footer-below{
             flex-direction: column;
-            align-items: center;
+            align-items: flex-start;
+            font-size: 1.5vw;
+        }
+
+        .sb__footer-below-links {
+            gap: 1;
+            margin: 0;
+
+
+            .foot__links {
+                font-size: 1.5vw;
+
+            }
         }
 
         .foot__link {
@@ -216,7 +238,7 @@
 
         .sb__footer-links_div{
             .textG{
-                font-size: 3vw;
+                font-size: 2vw;
             }
             
             .social-icons {
@@ -232,6 +254,8 @@
             }
 
         }
+
+
 
     }
 

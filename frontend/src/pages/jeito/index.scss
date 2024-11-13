@@ -5,7 +5,6 @@
     color: #ffffff;
     position: relative;
     height: 900px;
-
     h2 {
         color: #fff;
         font-size: 3rem;
@@ -14,7 +13,7 @@
         width: 30%;
         padding: 30px 0px 0px 40px;
     }
-
+    
     .cards-container {
         display: flex;
         gap: 20px;
@@ -22,15 +21,16 @@
         flex-wrap: wrap;
         padding: 80px;
         position: relative;
+        
     }
-
+    
     .card {
         width: 30vh;
         padding: 40px;
         border-radius: 15px;
         position: relative;
         transition: transform 0.3s ease;
-
+        
         &:hover {
             transform: scale(1.05);
         }
@@ -153,14 +153,14 @@
         }
     }
 
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 768px) {
         padding: 0px;
         height: 50%;
 
         h2 {
             font-size: 3rem;
             width: 60%;
-            padding: 15px 0px 0px 20px;
+            padding: 65px 0px 0px 20px;
             margin-bottom: 50px;
         }
 
@@ -202,18 +202,23 @@
                 }
 
                 .popup-info {
-                    align-items: center;
-                    flex-direction: column;
+                    flex-direction: row;
                     flex-wrap: wrap;
+                    align-items: flex-start;
                     text-align: left;
 
 
                     .popup-text {
-                        font-size: 3vw;
+                        width: 60%;
+                        font-size: 2vw;
+                        
+                        h2 {
+                            margin-bottom: 0px;
+                        }
                     }
 
                     .popup-image {
-                        width: 60%;
+                        width: 50%;
                         height: auto;
                     }
                 }
