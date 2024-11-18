@@ -69,13 +69,10 @@ export default function JeitoNossoUnificado() {
     ];
 
     const openPopup = (card, event) => {
-        setSelectedCard({
-            ...card,
-            position: {
-                top: '30%',
-                left: '0px'
-            },
-        });
+        console.log("Abrindo popup para o card:", card);
+        
+        setSelectedCard(card);
+
     };
 
     const closePopup = () => {
@@ -131,23 +128,15 @@ export default function JeitoNossoUnificado() {
                     description={selectedCard.popupDescription}
                     imageUrl={selectedCard.imagem}
                     onClose={closePopup}
-                    position={selectedCard.position}
+                    corDeFundo={selectedCard.corDeFundo}
                 />
             )}
         </div>
     );
 }
 
-function Popup({ title, description, imageUrl, onClose, position }) {
+function Popup({ title, description, imageUrl, onClose, corDeFundo }) {
     
-    const popupStyle = {
-        position: 'absolute',
-        top: `${position.top}px`,
-        left: `${position.left}px`,
-        transform: 'translate(-50%, -50%)',
-        zIndex: 1000,
-    };
-
     return (
         <div className="popup-overlay">
             <div className="popup">
@@ -155,7 +144,7 @@ function Popup({ title, description, imageUrl, onClose, position }) {
                     <span className="close-button" onClick={onClose}>&times;</span>
                     <div className="popup-info">
                         <div className="popup-text">
-                            <h2 className='colorido'>{title}</h2>
+                            <h2 style={{background: corDeFundo}} >{title}</h2>
                             <p>{description}</p>
                         </div>
                         <img src={imageUrl} alt={title} className="popup-image" />

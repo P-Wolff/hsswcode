@@ -1,111 +1,6 @@
 .pagina-contato {
   background: #ffffff;
 
-  .headline {
-    min-height: 40px;
-
-    & .estrela {
-
-        @function multiple-box-shadow($n) {
-            $value: '#{random(2000)}px #{random(2000)}px #FFF';
-            @for $i from 2 through $n {
-                $value: '#{$value}, #{random(2000)}px #{random(2000)}px #FFF';
-            }
-            @return unquote($value);
-        }
-        
-        $shadows-small: multiple-box-shadow(700);
-        $shadows-medium: multiple-box-shadow(200);
-        $shadows-big: multiple-box-shadow(100);
-        
-        
-        #stars {
-            width: 1px;
-            height: 1px;
-            background: transparent;
-            box-shadow: $shadows-small;
-            animation: animStar 50s linear infinite;
-        
-            &:after {
-                content: " ";
-                position: absolute;
-                top: 2000px;
-                width: 1px;
-                height: 1px;
-                background: transparent;
-                box-shadow: $shadows-small;
-            }
-        }
-        
-        #stars2 {
-            width: 2px;
-            height: 2px;
-            background: transparent;
-            box-shadow: $shadows-medium;
-            animation: animStar 100s linear infinite;
-        
-            &:after {
-                content: " ";
-                position: absolute;
-                top: 2000px;
-                width: 2px;
-                height: 2px;
-                background: transparent;
-                box-shadow: $shadows-medium;
-            }
-        }
-        
-        #stars3 {
-            width: 3px;
-            height: 3px;
-            background: transparent;
-            box-shadow: $shadows-big;
-            animation: animStar 150s linear infinite;
-        
-            &:after {
-                content: " ";
-                position: absolute;
-                top: 2000px;
-                width: 3px;
-                height: 3px;
-                background: transparent;
-                box-shadow: $shadows-big;
-            }
-        }
-        
-        #title {
-            position: absolute;
-            top: 45%;
-            left: 0;
-            right: 0;
-            color: #FFF;
-            text-align: center;
-            font-family: 'lato', sans-serif;
-            font-weight: 300;
-            font-size: 50px;
-            letter-spacing: 10px;
-            margin-top: -60px;
-            padding-left: 10px;
-        
-            > span {
-                background: -webkit-linear-gradient(#ffffff, #b0c6d8);
-                background-clip: text;
-                -webkit-text-fill-color: transparent;
-            }
-        }
-        
-        @keyframes animStar {
-            from {
-                transform: translateY(0px);
-            }
-            to {
-                transform: translateY(-2000px);
-            }
-        }
-    }     
-
-  }
-
 
   .texto-entrada {
     display: flex;
@@ -131,7 +26,7 @@
       margin-bottom: 10px;
     }
     p {
-      font-size: 1.5rem;
+      font-size: 2.5rem;
       text-align: left;
       color: #020E38;
       line-height: 1.5;
@@ -152,7 +47,7 @@
     margin-bottom: 50px;
 
     .tabs {
-      width: 92%;
+      width: 67%;
       display: flex;
       justify-content: space-around;
       margin-bottom: 90px;
@@ -166,7 +61,7 @@
         padding: 14px 80px;
         cursor: pointer;
         transition: color 0.3s, background-color 0.3s;
- 
+
 
         &::after {
           content: "";
@@ -205,7 +100,9 @@
       display: flex;
       flex-direction: row;
       align-items: baseline;
-      width: 98%;
+      justify-content: space-around;
+      width: 80%;
+      gap: 100px;
 
       .info-content {
         max-width: 355px;
@@ -351,13 +248,7 @@
   }
 
 
-  @media (max-width: 768px) {
-    .headline {
-      min-height: 0;
-      #title {
-        font-size: 0px;
-      }
-    }
+  @media screen and (max-width: 768px) {
   
     .texto-entrada h3 {
       font-size: 5rem;
@@ -370,6 +261,7 @@
   
     .tabs {
       flex-direction: column;
+      
       button {
         padding: 10px;
         font-size: 1.5rem;
@@ -377,27 +269,32 @@
     }
   
     .form-content {
-      flex-direction: column; 
-      align-items: center;   
-      margin: 0;              
-  
-      .info-content {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        justify-content: center;
+        gap: 0;
+
+      .info-content .info-content {
         margin: 0 0 20px 0;
         text-align: center;     
       }
   
-      .contatos-form {
-        width: 100%;  
-      }
     }
   
     .contatos-form {
+        width: 50%;
+        flex-direction: column;
+        align-items: flex-start;
+      
       .form-group {
         width: 100%; 
+        margin-bottom: 20px;
       }
   
       .submit-button {
-        width: 100%; 
+        width: 100%;
+        margin-top: 10px;
       }
     }
   }
