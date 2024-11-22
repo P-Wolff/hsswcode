@@ -90,6 +90,7 @@ export default function Contatos() {
           <button className={activeTab === 'Fornecedor' ? 'active' : ''} onClick={() => setActiveTab('Fornecedor')}>Fornecedor</button>
           <button className={activeTab === 'Outros' ? 'active' : ''} onClick={() => setActiveTab('Outros')}>Outros</button>
         </div>
+        
         <div className="form-content">
           {renderForm()}
         </div>
