@@ -110,7 +110,7 @@ function Form({ isDropdownOpen, toggleDropdown, selectedOption, selectOption }) 
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch('http://localhost:5050/send-email', {
+    fetch('http://4.172.207.208:5100/send-email', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
