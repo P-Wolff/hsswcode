@@ -44,6 +44,6 @@ app.post('/send-email', (req, res) => {
     });
 });
 
-app.listen(5050, () => {
-    console.log('Servidor rodando na porta 5050');
+app.listen(5100, () => {
+    console.log('Servidor rodando na porta 5100');
 });
